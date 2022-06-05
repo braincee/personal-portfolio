@@ -4,7 +4,7 @@ import { AiOutlineGithub, AiOutlineTwitter, AiOutlineMail } from 'react-icons/ai
 
 const Main = () => {
     return (
-        <div className='w-full h-screen text-center'> 
+        <div id='home' className='w-full h-screen text-center'> 
           <div className='max-w-[12] w-full h-full mx-auto p-2 flex justify-center items-center'>
               <div>
                     <p className='uppercase tracking-widest text-gray-600'>let's build something together</p>
