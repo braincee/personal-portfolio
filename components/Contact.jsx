@@ -1,8 +1,9 @@
 import React from 'react'
 import { FaLinkedinIn } from 'react-icons/fa'
-import { AiOutlineTwitter, AiOutlineGithub, AiOutlineMail } from 'react-icons/ai'
+import { AiOutlineTwitter, AiOutlineGithub } from 'react-icons/ai'
 import { HiOutlineChevronDoubleUp } from 'react-icons/hi'
 import Link from 'next/link'
+import { BsInstagram } from 'react-icons/bs'
 
 const Contact = () => {
   return (
@@ -40,7 +41,7 @@ const Contact = () => {
                             <AiOutlineTwitter />
                           </div>
                         <div className='rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease in duration-300  hover:bg-[#acabb8] hover:text-[#ffff]'>
-                            <AiOutlineMail />
+                            <BsInstagram />
                           </div>
                           </div>
                       </div>
