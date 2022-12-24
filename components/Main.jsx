@@ -1,7 +1,8 @@
-import React from 'react'
-import { FaLinkedinIn } from 'react-icons/fa'
-import { AiOutlineGithub, AiOutlineTwitter } from 'react-icons/ai'
-import { BsInstagram } from 'react-icons/bs'
+import React from 'react';
+import Link from 'next/link';
+import { FaLinkedinIn } from 'react-icons/fa';
+import { AiFillMediumCircle, AiOutlineGithub, AiOutlineTwitter } from 'react-icons/ai';
+import { BsInstagram } from 'react-icons/bs';
 
 const Main = () => {
     return (
@@ -16,17 +17,31 @@ const Main = () => {
               Application Programming Interface(API's), or designing user-facing websites, as well as interacting with clients
             during development.</p>
                     <div className='flex items-center justify-between max-w-[330px] m-auto py-4'>
-                        <div className='rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 hover:bg-[#acabb8] hover:text-[#ffff] ease in duration-300'>
-                            <FaLinkedinIn />
+                        <div className='rounded-full shadow-lg shadow-gray-400 p-5 cursor-pointer hover:scale-110 hover:bg-[#acabb8] hover:text-[#ffff] ease in duration-300'>
+                            <Link href="https://www.linkedin.com/in/stephen-annor/" target="_blank" rel="noopener noreferrer">
+                              <FaLinkedinIn />
+                            </Link>
                           </div>
-                        <div className='rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease in duration-300 hover:bg-[#acabb8] hover:text-[#ffff]'>
-                            <AiOutlineGithub />
+                        <div className='rounded-full shadow-lg shadow-gray-400 p-5 cursor-pointer hover:scale-110 ease in duration-300 hover:bg-[#acabb8] hover:text-[#ffff]'>
+                            <Link href="https://github.com/braincee" target="_blank">
+                              <AiOutlineGithub />
+                            </Link>
+                            
                           </div>
-                        <div className='rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease in duration-300  hover:bg-[#acabb8] hover:text-[#ffff]'>
-                            <AiOutlineTwitter />
+                        <div className='rounded-full shadow-lg shadow-gray-400 p-5 cursor-pointer hover:scale-110 ease in duration-300  hover:bg-[#acabb8] hover:text-[#ffff]'>
+                            <Link href="https://twitter.com/annor0543" target="_blank">
+                              <AiOutlineTwitter />
+                            </Link>
                           </div>
-                        <div className='rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease in duration-300  hover:bg-[#acabb8] hover:text-[#ffff]'>
-                            <BsInstagram />
+                        <div className='rounded-full shadow-lg shadow-gray-400 p-5 cursor-pointer hover:scale-110 ease in duration-300  hover:bg-[#acabb8] hover:text-[#ffff]'>
+                            <Link href="https://www.instagram.com/appiah.korang/" target="_blank">
+                              <BsInstagram />
+                            </Link>
+                          </div>
+                          <div className='rounded-full shadow-lg shadow-gray-400 p-5 cursor-pointer hover:scale-110 ease in duration-300  hover:bg-[#acabb8] hover:text-[#ffff]'>
+                            <Link href="https://www.instagram.com/appiah.korang/" target="_blank">
+                              <AiFillMediumCircle />
+                            </Link>
                           </div>
                     </div>
                 </div> 

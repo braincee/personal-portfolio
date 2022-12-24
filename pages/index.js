@@ -1,10 +1,13 @@
-import Head from 'next/head'
-import About from '../components/About'
-import Main from '../components/Main'
-import Navbar from '../components/Navbar'
-import Projects from '../components/Projects'
-import Skills from '../components/Skills'
-import Contact from '../components/Contact'
+import Head from 'next/head';
+import About from '../components/About';
+import Main from '../components/Main';
+import Navbar from '../components/Navbar';
+import Projects from '../components/Projects';
+import Skills from '../components/Skills';
+import Contact from '../components/Contact';
+import Recommendation from '../components/Recommendation';
+import Footer from '../components/Footer';
+
 
 
 export default function Home() {
@@ -21,6 +24,8 @@ export default function Home() {
       <Skills />
       <Projects />
       <Contact />
+      <Recommendation />
+      <Footer />
     </div>
   )
 }
