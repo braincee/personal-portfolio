@@ -31,13 +31,12 @@ const property = () => {
             are able to search properties based on an Address, City, or ZIP code
             to retrieve a list of active properties currently for sale. You will
             be able to view property information as well as the specific
-            location of the property integrated with the Google Maps API. User
-            authentication is available so you can signup & signin to your
-            account with an email address in order to save your favorite
-            properties. This is made possible with Zillow API.
           </p>
-          <button className='px-8 py-2 mt-4 mr-8'>Demo</button>
-          <button className='px-8 py-2 mt-4'>Code</button>
+          <button className='px-8 py-2 mt-4 mr-8 cursor-pointer'>Demo</button>
+          <button className='px-8 py-2 mt-4 mr-8 cursor-pointer'>Code</button>
+          <Link href='/#projects'>
+            <button className='px-8 py-2 mt-4 cursor-pointer'>Back</button>
+          </Link>
         </div>
         <div className='col-span-4 md:col-span-1 shadow-xl shadow-gray-400 rounded-xl p-4'>
           <div className='p-2'>
@@ -55,18 +54,9 @@ const property = () => {
               <p className='text-gray-600 py-2 flex items-center'>
                 <RiRadioButtonFill className='pr-1' /> Firebase
               </p>
-              <p className='text-gray-600 py-2 flex items-center'>
-                <RiRadioButtonFill className='pr-1' /> Google API
-              </p>
-              <p className='text-gray-600 py-2 flex items-center'>
-                <RiRadioButtonFill className='pr-1' /> Zillow API
-              </p>
             </div>
           </div>
         </div>
-        <Link href='/#projects'>
-            <p className='underline cursor-pointer'>Back</p>
-        </Link>
       </div>
     </div>
   );

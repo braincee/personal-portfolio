@@ -1,10 +1,10 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import React, { useState, useEffect } from 'react';
-import { AiOutlineClose, AiOutlineMail, AiOutlineMenu } from 'react-icons/ai';
+import { AiOutlineClose, AiOutlineMenu, AiOutlineTwitter } from 'react-icons/ai';
 import { FaGithub, FaLinkedinIn } from 'react-icons/fa';
-import { BsFillPersonLinesFill } from 'react-icons/bs';
 import { useRouter } from 'next/router';
+import { BsInstagram } from 'react-icons/bs';
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
@@ -55,10 +55,11 @@ const Navbar = () => {
       <div className='flex justify-between items-center w-full h-full px-2 2xl:px-16'>
         <Link href='/'>
           <Image
-            src='/../public/assets/navLogo.png'
+            src='/../public/assets/stephenLogo.png'
             alt='/'
-            width='125'
+            width='80'
             height='50'
+            borderRadius='100'
             className='cursor-pointer'
           />
         </Link>
@@ -76,11 +77,6 @@ const Navbar = () => {
             <Link href='/#projects'>
               <li className='ml-10 text-sm uppercase hover:border-b'>
                 Projects
-              </li>
-            </Link>
-            <Link href="/resume">
-            <li className='ml-10 text-sm uppercase hover:border-b'>
-                Resume
               </li>
             </Link>
             <Link href='/#contact'>
@@ -119,9 +115,9 @@ const Navbar = () => {
             <div className='flex w-full items-center justify-between'>
               <Link href='/'>
                 <Image
-                  src='/../public/assets/navLogo.png'
-                  width='87'
-                  height='35'
+                  src='/../public/assets/stephenLogo.png'
+                  width='70'
+                  height='50'
                   alt='/'
                 />
               </Link>
@@ -134,7 +130,7 @@ const Navbar = () => {
             </div>
             <div className='border-b border-gray-300 my-4'>
               <p className='w-[85%] md:w-[90%] py-4'>
-                Let's build something legendary together
+                Lets Build Something New.
               </p>
             </div>
           </div>
@@ -142,60 +138,59 @@ const Navbar = () => {
             <ul className='uppercase'>
               <Link href='/'>
                 <li onClick={() => setNav(false)} className='py-4 text-sm'>
-                  Home
+                  HOME
                 </li>
               </Link>
               <Link href='/#about'>
                 <li onClick={() => setNav(false)} className='py-4 text-sm'>
-                  About
+                  ABOUT
                 </li>
               </Link>
               <Link href='/#skills'>
                 <li onClick={() => setNav(false)} className='py-4 text-sm'>
-                  Skills
+                  SKILLS
                 </li>
               </Link>
               <Link href='/#projects'>
                 <li onClick={() => setNav(false)} className='py-4 text-sm'>
-                  Projects
+                  PROJECTS
                 </li>
               </Link>
               <Link href='/#contact'>
                 <li onClick={() => setNav(false)} className='py-4 text-sm'>
-                  Contact
+                  CONTACT
                 </li>
               </Link>
             </ul>
             <div className='pt-40'>
-              <p className='uppercase tracking-widest text-[#5651e5]'>
-                Let's Connect
+              <p className='tracking-widest text-[#000000]'>
+                LETS CONNECT
               </p>
               <div className='flex items-center justify-between my-4 w-full sm:w-[80%]'>
-                <a
-                  href='https://www.linkedin.com/in/clint-briley-50056920a/'
+                <Link href='https://www.linkedin.com/in/stephen-annor/'
                   target='_blank'
                 >
                   <div className='rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300'>
                     <FaLinkedinIn />
                   </div>
-                </a>
-                <a
-                  href='https://github.com/fireclint'
+                </Link>
+                <Link
+                  href='https://github.com/braincee'
                   target='_blank'
                 >
                   <div className='rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300'>
                     <FaGithub />
                   </div>
-                </a>
-                <Link href='/#contact'>
+                </Link>
+                <Link href='https://twitter.com/annor0543' target='_blank'>
                   <div onClick={()=>setNav(!nav)} className='rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300'>
-                    <AiOutlineMail />
+                    <AiOutlineTwitter />
                   </div>
                 </Link>
-                <Link href='/resume'>
-                  <div onClick={()=>setNav(!nav)} className='rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300'>
-                    <BsFillPersonLinesFill />
-                  </div>
+                <Link href="https://www.instagram.com/appiah.korang/" target="_blank">
+                <div onClick={()=>setNav(!nav)} className='rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300'>
+                  <BsInstagram />
+                </div>
                 </Link>
               </div>
             </div>

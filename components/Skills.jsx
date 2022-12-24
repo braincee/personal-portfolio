@@ -59,11 +59,35 @@ const Skills = () => {
           <div className='p-6 shadow-xl rounded-xl hover:scale-105 ease in duration-300'>
             <div className='grid grid-cols-2 gap-4 jsutify-center items-center'>
               <div className='m-auto'>
-                 <Image src='/../public/assets/skills/github1.png' width="64px" height="64px" alt='/'/>
+                 <Image src='/../public/assets/skills/redux2.png' width="70px" height="64px" alt='/'/>
               </div>
               <div>
                 <h3 className='flex flex-col items-center justify-center'>
-                  Github
+                  Redux
+                </h3>
+              </div>
+            </div>
+          </div>
+          <div className='p-6 shadow-xl rounded-xl hover:scale-105 ease in duration-300'>
+            <div className='grid grid-cols-2 gap-4 jsutify-center items-center'>
+              <div className='m-auto'>
+                 <Image src='/../public/assets/skills/ruby.png' width="100px" height="64px" alt='/'/>
+              </div>
+              <div>
+                <h3 className='flex flex-col items-center justify-center'>
+                  Ruby
+                </h3>
+              </div>
+            </div>
+          </div>
+          <div className='p-6 shadow-xl rounded-xl hover:scale-105 ease in duration-300'>
+            <div className='grid grid-cols-2 gap-4 jsutify-center items-center'>
+              <div className='m-auto'>
+                 <Image src='/../public/assets/skills/rails5.png' width="100px" height="90px" alt='/'/>
+              </div>
+              <div>
+                <h3 className='flex flex-col items-center justify-center'>
+                  Ruby On Rails
                 </h3>
               </div>
             </div>
@@ -75,7 +99,7 @@ const Skills = () => {
               </div>
               <div>
                 <h3 className='flex flex-col items-center justify-center'>
-                  firebase
+                  Firebase
                 </h3>
               </div>
             </div>
@@ -83,35 +107,11 @@ const Skills = () => {
           <div className='p-6 shadow-xl rounded-xl hover:scale-105 ease in duration-300'>
             <div className='grid grid-cols-2 gap-4 jsutify-center items-center'>
               <div className='m-auto'>
-                 <Image src='/../public/assets/skills/mongo.png' width="64px" height="64px" alt='/'/>
+                 <Image src='/../public/assets/skills/postgresql.png' width="64px" height="64px" alt='/'/>
               </div>
               <div>
                 <h3 className='flex flex-col items-center justify-center'>
-                  Mongo
-                </h3>
-              </div>
-            </div>
-          </div>
-          <div className='p-6 shadow-xl rounded-xl hover:scale-105 ease in duration-300'>
-            <div className='grid grid-cols-2 gap-4 jsutify-center items-center'>
-              <div className='m-auto'>
-                 <Image src='/../public/assets/skills/shopify.png' width="64px" height="64px" alt='/'/>
-              </div>
-              <div>
-                <h3 className='flex flex-col items-center justify-center'>
-                  Shopify
-                </h3>
-              </div>
-            </div>
-          </div>
-          <div className='p-6 shadow-xl rounded-xl hover:scale-105 ease in duration-300'>
-            <div className='grid grid-cols-2 gap-4 jsutify-center items-center'>
-              <div className='m-auto'>
-                 <Image src='/../public/assets/skills/tailwind.png' width="64px" height="64px" alt='/'/>
-              </div>
-              <div>
-                <h3 className='flex flex-col items-center justify-center'>
-                  Tailwind
+                  PostgreSQL
                 </h3>
               </div>
             </div>
