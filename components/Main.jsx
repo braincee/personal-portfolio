@@ -13,7 +13,7 @@ const Main = () => {
           <div className='max-w-[12] w-full h-full mx-auto p-2 flex justify-center items-center'>
               <div>
                 <h2 className='py-4'>
-                 Hello I'm <span className='text-[#d0efff] italic'>STEPHEN</span>
+                 Hello My name is <span className='text-[#d0efff] italic'>Stephen Annor</span>
                  </h2>
                     <h2 className='py-4 uppercase'>A full-stack developer</h2>
                      <p className='uppercase tracking-widest'>let's build something together</p>
