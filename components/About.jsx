@@ -2,28 +2,34 @@
 import React from 'react';
 import Image from 'next/image';
 
+
 const About = () => {
   return (
-      <div id='about' className='w-full md:h-screen p-2 flex items-center py-16'>
-          <div className='max-w-[1240px] m-auto md:grid grid-cols-3 gap-8'>
-              <div className='col-span-2'>
-                  <h2 className='text-xl tracking-widest text-[#5651e5]'>ABOUT ME</h2>
-          <p className='py-4 text-gray-600 text-2xl'>I am a Full-Stack developer currently using modern technologies to plan, build and
-            implement reusable user interfaces and user experience systems of websites, software programs, and web-based
-            applications. I am passionate about researching and acquiring new ideas to break down complex problems into
-            smaller component solutions. I view product development as a team effort, accept challenges, enjoy constructive
-            criticism, contribute tactically and communicate effectively with team members and clients. As technologies are
-            emerging with improvements in libraries and frameworks,
-            I am determined to equip myself with the most trending and advanced technologies for a brighter future.</p>
-             </div>
-              <div className='w-full h-auto m-auto shadow-xl shadow-gray-400 rounded-xl flex items-center justify-center p-2 hover:scale-110 ease in duration-300'>
+      <div id='about' className='max-w-[1240px] m-auto px-2 w-full md:h-screen p-2 flex-col items-center mb-20'>
+        <div className="relative mb-8 grid grid-cols-2 items-center">
+                  <div className="h-1 bg-[#9668f5] mr-2"></div>
+                  <p className='relative inline-block text-3xl pl-2'>ABOUT ME</p>
+                </div>
+          <div className='max-w-[1240px] m-auto md:grid grid-cols-2 gap-8'>
+          <div className='flex justify-center'>
                    <Image
             className='rounded-xl'
-            width='370'
+            
+            width='350'
             height='300'
-            src='/../public/assets/laptop.jpg'
-            alt='laptop'
+            src='/../public/assets/steve.png'
+            alt='stephen'
           />
+             </div>
+              <div className='col-span-1'>
+          <p className='py-4 text-2xl ml-4'>"As a Full-Stack developer, I use modern technologies to design, 
+          develop, and implement reusable user interfaces and user experience systems for websites, software 
+          programs, and web-based applications. I am passionate about researching and exploring new ideas to 
+          break down complex problems into smaller, more manageable solutions. I believe in the importance of 
+          teamwork and collaboration in product development, and I embrace challenges, welcome constructive criticism, 
+          contribute effectively, and communicate clearly with team members and clients. As new technologies continue 
+          to emerge and improve, I am committed to staying up-to-date and using the most advanced tools and techniques 
+          to enhance my skills and future prospects."</p>
              </div>
           </div>
     </div>

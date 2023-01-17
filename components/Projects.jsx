@@ -7,13 +7,13 @@ import ProjectItem from './ProjectItem';
 
 const Projects = () => {
   return (
-    <div id='projects' className='w-full'>
+    <div id='projects' className='w-full mb-20'>
       <div className='max-w-[1240px] mx-auto px-2 py-16'>
-        <p className='text-xl tracking-widest text-[#5651e5]'>
-          PROJECTS
-        </p>
-        <h2 className='py-4'>Recent Work</h2>
-        <div className='grid md:grid-cols-1 gap-8 max-w-[50%] mx-auto'>
+      <div className="relative mb-20 grid grid-cols-2 items-center">
+          <div className="h-1 bg-[#9668f5] mr-2"></div>
+          <p className='relative inline-block text-xl pl-2 md:text-3xl'>RECENT WORKS</p>
+        </div>
+        <div className='grid md:grid-cols-3 gap-8 max-w-[90%] mx-auto'>
           <ProjectItem
             title='Property Finder'
             backgroundImg={propertyImg}

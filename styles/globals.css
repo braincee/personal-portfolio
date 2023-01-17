@@ -8,11 +8,21 @@ html {
 
 @layer base {
   body {
-    @apply bg-[#cdd0dae8] text-[#0f121a] tracking-wide
+    @apply bg-[#03254c]
+  
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-bold
+    @apply font-bold text-[#2a9df4]
+  }
+
+  p {
+    @apply text-[#d0efff] italic
+
+  }
+
+  li {
+    @apply text-[#d0efff]
   }
 
   h1 {
@@ -20,14 +30,16 @@ html {
   }
 
   h2 {
-    @apply text-3xl sm:text-4xl
+    @apply text-3xl sm:text-4xl tracking-widest
   }
 
   li {
     @apply cursor-pointer
   }
 
-  button {
-    @apply shadow-xl shadow-gray-400 rounded-xl uppercase bg-gradient-to-r from-[#0f121ac0] to-[#0f121a50] text-white
-  }
+}
+
+.h-1 {
+  height: 1px;
+  top: 50%;
 }
