@@ -31,11 +31,11 @@ const Skills = () => {
       };
 
   return (
-<div>
-  <div id='skills' className='mx-auto px-2 mb-20'>
- <div className='max-w-[1240px] mx-auto grid grid-cols-2 px-2 mb-20 items-center'>
-   <div className="h-1 bg-[#9668f5] mr-2"></div>
-    <p className='relative inline-block text-xl pl-2 md:text-3xl'>TECHNICAL SKILLS</p>
+<div className=''>
+  <div id='skills' className='mx-auto px-2 py-[150px] md:pt-[20px] skills'>
+ <div className='relative grid grid-cols-2 px-2 mb-20 items-center section'>
+   <div className="h-1 bg-yellow-600 mr-2"></div>
+    <p className='relative inline-block text-3xl pl-2 text-yellow-600'>TECHNICAL SKILLS</p>
   </div>
   <div className='grid grid-cols-3 mb-20 ml-6 md:flex justify-center'>
   <div className='mb-4 flex flex-col pr-12'>
