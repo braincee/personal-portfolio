@@ -5,7 +5,6 @@ import { HiOutlineChevronDoubleUp } from 'react-icons/hi';
 import Link from 'next/link';
 import Image from 'next/image';
 import { BsInstagram } from 'react-icons/bs';
-import { toast, ToastContainer } from 'react-toastify';
 
 const Contact = () => {
 
@@ -16,7 +15,7 @@ const Contact = () => {
         message: ""
       });
 
-    // const [sucessAlert, setSuccessAlert ] = useState(false);
+    const [sucessAlert, setSuccessAlert ] = useState(false);
     
       // Update inputs value
       const handleParam = () => (e) => {
@@ -46,26 +45,21 @@ const Contact = () => {
           body: formData
         }).then(() => setQuery({ name: "", phone: "", email: "", message: "" }));
 
-        // setSuccessAlert(true);
-        // setTimeout(() => {
-        //     setSuccessAlert(false);
-        // }, 4000);
-
-        toast("Form submitted successfully!", {
-          className: "toast-success",
-          autoClose: 3000,
-        });
+        setSuccessAlert(true);
+        setTimeout(() => {
+            setSuccessAlert(false);
+        }, 7000);
 
       };
 
   return (
       <div>
-          <div id='contact' className='max-w-[1240px] m-auto px-2 py-16 w-full'>
-                <div className="relative mb-20 grid grid-cols-2 items-center">
-                  <div className="h-1 bg-[#9668f5] mr-2"></div>
-                  <p className='relative inline-block text-xl pl-2 md:text-3xl'>GET IN TOUCH</p>
+          <div id='contact' className='max-w-[1240px] m-auto px-2 py-16 w-full contact'>
+                <div className="relative mb-20 grid grid-cols-2 items-center section">
+                  <div className="h-1 bg-yellow-600 mr-2"></div>
+                  <p className='relative inline-block text-3xl pl-2 text-yellow-600'>GET IN TOUCH</p>
                 </div>
-              <div className='grid lg:grid-cols-5 gap-8'>
+              <div className='grid lg:grid-cols-5 gap-8 contact-1'>
                   {/*left*/ }
 
                   <div className='col-span-3 lg:col-span-2 w-full h-full bg-[#1166b127] rounded-xl p-4'>
@@ -86,7 +80,7 @@ const Contact = () => {
                           </div>
                           <div>
                           <p className='uppercase pt-8 text-[#2a9df4]'>Connect With Me</p>
-                          <div className='flex items-center justify-between py-4'>
+                          <div className='flex items-center justify-around py-4'>
                             <Link href="https://www.linkedin.com/in/stephen-annor/" target="_blank">
                              <div className='rounded-full bg-[#2a9cf45d] p-6 cursor-pointer hover:scale-110 hover:bg-[#0403072a] hover:text-[#d0efff] ease in duration-300'>
                               <FaLinkedinIn />
@@ -114,9 +108,10 @@ const Contact = () => {
                   </div>
                   {/*right*/ }
                   <div className='col-span-3 w-full h-auto bg-[#1166b127] rounded-xl lg:p-4'>
-                  {/* {sucessAlert && (
-                                <p className='bg-[#eaee20fa] text-center mt-10 tracking-widest text-2xl'>Thanks for contacting Stephen</p>
-                              )} */}
+                  {sucessAlert && (
+                                <p className='text-yellow-600 text-center mt-10 tracking'>Thank you for ontacting Stephen, 
+                                your message has been recieved and will be replied as soon as possible</p>
+                              )}
                       <div className='p-4'>
                           <form onSubmit={formSubmit}>
                               <div className='grid md:grid-cols-2 gap-4 w-full py-2'>
