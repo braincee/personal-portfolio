@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Babylonica&display=swap');
+
 html {
   scroll-behavior: smooth;
 }
@@ -39,7 +42,133 @@ html {
 
 }
 
+@media (max-width: 640px) {
+  .skills {
+    width: 900px;
+  }
+
+  .projects {
+    width: 900px;
+  }
+
+  .about {
+    width: 880px;
+    padding-bottom: 0;
+  }
+
+  .about-1 {
+    width: 100%;
+    padding: 30px;
+  }
+
+  .main {
+    width: 900px;
+    padding-top: 200px;
+  }
+
+  .recommendations {
+    width: 900px;
+  }
+
+  .contact {
+    width: 900px;
+  }
+
+  .card {
+    width: 750px;
+  }
+
+  .card-1 {
+    margin-left: 30px;
+  }
+  
+  .section {
+    left: 30px
+  }
+
+  .logo {
+    margin-left: 30px;
+  }
+
+  .project {
+    width: 500px;
+  }
+
+  .project-image {
+    position: relative;
+    width: 500px;
+    height: 300px;
+  }
+
+  .project-image-1 {
+    height: 300px;
+  }
+
+  /* .drawer-2 {
+    width: 900px;
+    height: 100%;
+  } */
+
+  /* .drawer-head {
+    margin-top: 45px;
+  }
+
+  .drawer-links {
+    gap: 38px;
+    margin-top: 65px;
+  }
+
+  .drawer-bottom {
+    padding-top: 65px;
+  }
+
+  .drawer-icons {
+    margin-top: 20px;
+  }  */
+}
+
+
+@media (min-width: 767px) {
+  .recommendations {
+    width: 100%;
+  }
+
+  .card {
+    width: 90%;
+  }
+
+  .skills {
+    width: 100%;
+  }
+
+  .projects {
+    width: 100%;
+  }
+
+  .about {
+    width: 100%;
+  }
+
+  .main {
+    width: 100%;
+    padding-top: 200px;
+  }
+
+  .contact {
+    width: 100%;
+  }
+
+  .card-1 {
+    margin-left: 10%;
+  }
+}
+
 .h-1 {
   height: 1px;
   top: 50%;
 }
+
+.welcome {
+  font-family: 'Oswald', sans-serif;
+}
+
