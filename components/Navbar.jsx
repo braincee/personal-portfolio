@@ -1,7 +1,8 @@
+import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import React, { useState, useEffect } from 'react';
-import { AiOutlineClose, AiOutlineMenu, AiOutlineTwitter } from 'react-icons/ai';
+import { AiOutlineClose, AiOutlineTwitter } from 'react-icons/ai';
+import { TiThMenuOutline } from 'react-icons/ti';
 import { FaGithub, FaLinkedinIn } from 'react-icons/fa';
 import { useRouter } from 'next/router';
 import { BsInstagram } from 'react-icons/bs';
@@ -9,8 +10,8 @@ import { BsInstagram } from 'react-icons/bs';
 const Navbar = () => {
   const [nav, setNav] = useState(false);
   const [shadow, setShadow] = useState(false);
-  const [navBg, setNavBg] = useState('#ecf0f3');
-  const [linkColor, setLinkColor] = useState('#1f2937');
+  const [navBg, setNavBg] = useState('#03254c');
+  const [linkColor, setLinkColor] = useState('#187bcd');
   const router = useRouter();
 
   useEffect(() => {
@@ -21,10 +22,10 @@ const Navbar = () => {
       router.asPath === '/twitch'
     ) {
       setNavBg('transparent');
-      setLinkColor('#ecf0f3');
+      setLinkColor('#187bcd');
     } else {
-      setNavBg('#ecf0f3');
-      setLinkColor('#1f2937');
+      setNavBg('#03254c');
+      setLinkColor('#187bcd');
     }
   }, [router]);
 
@@ -43,6 +44,7 @@ const Navbar = () => {
     window.addEventListener('scroll', handleShadow);
   }, []);
 
+  
   return (
     <div
       style={{ backgroundColor: `${navBg}` }}
@@ -53,45 +55,55 @@ const Navbar = () => {
       }
     >
       <div className='flex justify-between items-center w-full h-full px-2 2xl:px-16'>
+        <div className='logo'>
         <Link href='/'>
           <Image
-            src='/../public/assets/stephenLogo.png'
+            src='/../public/assets/Logo.png'
             alt='/'
-            width='80'
+            width='70'
             height='50'
-            borderRadius='100'
-            className='cursor-pointer'
           />
         </Link>
+        </div>
         <div>
           <ul style={{ color: `${linkColor}` }} className='hidden md:flex'>
-            <Link href='/'>
-              <li className='ml-10 text-sm uppercase hover:border-b'>Home</li>
+            <Link href='/#about' as='/#about'>
+              <li className={`ml-10 text-sm uppercase hover:border-b text-yellow-500`}
+              >
+              About</li>
             </Link>
-            <Link href='/#about'>
-              <li className='ml-10 text-sm uppercase hover:border-b'>About</li>
+            <Link href='/#skills' as='/#skills'>
+              <li className={`ml-10 text-sm uppercase hover:border-b text-yellow-500`}
+              >
+                Skills
+              </li>
             </Link>
-            <Link href='/#skills'>
-              <li className='ml-10 text-sm uppercase hover:border-b'>Skills</li>
-            </Link>
-            <Link href='/#projects'>
-              <li className='ml-10 text-sm uppercase hover:border-b'>
+            <Link href='/#projects' as='/#projects'>
+              <li className={`ml-10 text-sm uppercase hover:border-b text-yellow-500`}
+              >
                 Projects
               </li>
             </Link>
-            <Link href='/#contact'>
-              <li className='ml-10 text-sm uppercase hover:border-b'>
+            <Link href='/#recommendations' as='/#recommendations'>
+              <li className={`ml-10 text-sm uppercase hover:border-b text-yellow-500`}
+              >
+                Recommendations
+              </li>
+            </Link>
+            <Link href='/#contact' as='/#contact'>
+              <li className={`ml-10 text-sm uppercase hover:border-b text-yellow-500`}
+              >
                 Contact
               </li>
             </Link>
+
           </ul>
           {/* Hamburger Icon */}
           <div
-            style={{ color: `${linkColor}` }}
             onClick={handleNav}
-            className='md:hidden'
+            className='md:hidden mr-[30px] mt-2 text-yellow-600'
           >
-            <AiOutlineMenu size={25} />
+            <TiThMenuOutline size={50} />
           </div>
         </div>
       </div>
@@ -100,14 +112,14 @@ const Navbar = () => {
       {/* Overlay */}
       <div
         className={
-          nav ? 'md:hidden fixed left-0 top-0 w-full h-screen bg-black/70' : ''
+          nav ? 'md:hidden fixed left-0 top-0 w-full h-[100%] bg-[#03254cd0]' : ''
         }
       >
         {/* Side Drawer Menu */}
         <div
           className={
             nav
-              ? ' fixed left-0 top-0 w-[75%] sm:w-[60%] md:w-[45%] h-screen bg-[#ecf0f3] p-10 ease-in duration-500'
+              ? ' fixed left-0 top-0 w-[100%] sm:w-[100%] md:w-[100%] h-[100%] bg-[#03254c] p-10 ease-in duration-500'
               : 'fixed left-[-100%] top-0 p-10 ease-in duration-500'
           }
         >
@@ -115,7 +127,7 @@ const Navbar = () => {
             <div className='flex w-full items-center justify-between'>
               <Link href='/'>
                 <Image
-                  src='/../public/assets/stephenLogo.png'
+                  src='/../public/assets/Logo.png'
                   width='70'
                   height='50'
                   alt='/'
@@ -123,54 +135,59 @@ const Navbar = () => {
               </Link>
               <div
                 onClick={handleNav}
-                className='rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer'
+                className='rounded-full bg-yellow-500 p-5 cursor-pointer hover:scale-110 ease in duration-300'
               >
-                <AiOutlineClose />
+                <AiOutlineClose size={20} />
               </div>
             </div>
             <div className='border-b border-gray-300 my-4'>
-              <p className='w-[85%] md:w-[90%] py-4'>
-                Lets Build Something New.
+              <p className='w-[85%] md:w-[90%] py-4 drawer-head'>
+                Let&#39;s build something legendary together
               </p>
             </div>
           </div>
-          <div className='py-4 flex flex-col'>
-            <ul className='uppercase'>
+          <div className='py-4 flex flex-col drawer-links'>
+            <ul className='m-auto'>
               <Link href='/'>
-                <li onClick={() => setNav(false)} className='py-4 text-sm'>
+                <li onClick={() => setNav(false)} className='py-4'>
                   HOME
                 </li>
               </Link>
               <Link href='/#about'>
-                <li onClick={() => setNav(false)} className='py-4 text-sm'>
+                <li onClick={() => setNav(false)} className='py-4'>
                   ABOUT
                 </li>
               </Link>
               <Link href='/#skills'>
-                <li onClick={() => setNav(false)} className='py-4 text-sm'>
+                <li onClick={() => setNav(false)} className='py-4'>
                   SKILLS
                 </li>
               </Link>
               <Link href='/#projects'>
-                <li onClick={() => setNav(false)} className='py-4 text-sm'>
+                <li onClick={() => setNav(false)} className='py-4'>
                   PROJECTS
                 </li>
               </Link>
+              <Link href='/#recommendations'>
+                <li onClick={() => setNav(false)} className='py-4'>
+                  RECOMMENDATIONS
+                </li>
+              </Link>
               <Link href='/#contact'>
-                <li onClick={() => setNav(false)} className='py-4 text-sm'>
+                <li onClick={() => setNav(false)} className='py-4'>
                   CONTACT
                 </li>
               </Link>
             </ul>
-            <div className='pt-40'>
-              <p className='tracking-widest text-[#000000]'>
-                LETS CONNECT
+            <div className='drawer-bottom pt-40'>
+              <p className='text-yellow-600 uppercase tracking-widest'>
+                Let&#39;s Connect
               </p>
-              <div className='flex items-center justify-between my-4 w-full sm:w-[80%]'>
+              <div className='flex items-center justify-around my-4 w-full sm:w-[80%] drawer-icons'>
                 <Link href='https://www.linkedin.com/in/stephen-annor/'
                   target='_blank'
                 >
-                  <div className='rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300'>
+                  <div className='rounded-full bg-yellow-600 p-5'>
                     <FaLinkedinIn />
                   </div>
                 </Link>
@@ -178,17 +195,17 @@ const Navbar = () => {
                   href='https://github.com/braincee'
                   target='_blank'
                 >
-                  <div className='rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300'>
+                  <div className='rounded-full bg-yellow-600 p-5'>
                     <FaGithub />
                   </div>
                 </Link>
                 <Link href='https://twitter.com/annor0543' target='_blank'>
-                  <div onClick={()=>setNav(!nav)} className='rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300'>
+                  <div className='rounded-full bg-yellow-600 p-5'>
                     <AiOutlineTwitter />
                   </div>
                 </Link>
                 <Link href="https://www.instagram.com/appiah.korang/" target="_blank">
-                <div onClick={()=>setNav(!nav)} className='rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300'>
+                <div className='rounded-full bg-yellow-600 p-5'>
                   <BsInstagram />
                 </div>
                 </Link>

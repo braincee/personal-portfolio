@@ -32,6 +32,7 @@ const Contact = () => {
           [message]: value
         }));
       };
+
       // Form Submit function
       const formSubmit = (e) => {
         e.preventDefault();
@@ -43,22 +44,25 @@ const Contact = () => {
           method: "POST",
           body: formData
         }).then(() => setQuery({ name: "", phone: "", email: "", message: "" }));
-        
+
         setSuccessAlert(true);
         setTimeout(() => {
             setSuccessAlert(false);
-        }, 4000);
+        }, 7000);
+
       };
 
   return (
       <div>
-          <div id='contact' className='max-w-[1240px] m-auto px-2 py-16 w-full'>
-              <p className='text-xl tracking-widest uppercase text-[#5651e5]'>Contact</p>
-              <h2 className='py-4'>Get In Touch</h2>
-              <div className='grid lg:grid-cols-5 gap-8'>
+          <div id='contact' className='max-w-[1240px] m-auto px-2 py-16 w-full contact'>
+                <div className="relative mb-20 grid grid-cols-2 items-center section">
+                  <div className="h-1 bg-yellow-600 mr-2"></div>
+                  <p className='relative inline-block text-3xl pl-2 text-yellow-600'>GET IN TOUCH</p>
+                </div>
+              <div className='grid lg:grid-cols-5 gap-8 contact-1'>
                   {/*left*/ }
 
-                  <div className='col-span-3 lg:col-span-2 w-full h-full shadow-xl shadow-gray-400 rounded-xl p-4'>
+                  <div className='col-span-3 lg:col-span-2 w-full h-full bg-[#1166b127] rounded-xl p-4'>
                       <div className='lg:p-4 h-full'>
                           <div>
                               <Image
@@ -69,31 +73,31 @@ const Contact = () => {
                                   alt='/' />
                           </div>
                           <div>
-                              <h2 className='py-2'>Stephen Annnor</h2>
-                              <p>Full-Stack Developer</p>
-                              <p className='py-4'> I am available for freelance or full-time positions. Contact
+                              <p className='py-2 text-[#2a9df4] text-3xl tracking-widest'>Stephen Annnor</p>
+                              <p className='text-[#2a9df4] text-xl tracking-widest'>Full-Stack Developer</p>
+                              <p className='py-4 text-[#2a9df4]'> I am available for freelance or full-time positions. Contact
                                  me and let's talk.</p>
                           </div>
                           <div>
-                          <p className='uppercase pt-8'>Connect With Me</p>
-                          <div className='flex items-center justify-between py-4'>
+                          <p className='uppercase pt-8 text-[#2a9df4]'>Connect With Me</p>
+                          <div className='flex items-center justify-around py-4'>
                             <Link href="https://www.linkedin.com/in/stephen-annor/" target="_blank">
-                             <div className='rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 hover:bg-[#acabb8] hover:text-[#ffff] ease in duration-300'>
+                             <div className='rounded-full bg-[#2a9cf45d] p-6 cursor-pointer hover:scale-110 hover:bg-[#0403072a] hover:text-[#d0efff] ease in duration-300'>
                               <FaLinkedinIn />
                              </div>
                           </Link>
                           <Link href="https://github.com/braincee" target="_blank">
-                           <div className='rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease in duration-300 hover:bg-[#acabb8] hover:text-[#ffff]'>
+                           <div className='rounded-full bg-[#2a9cf45d] p-6 cursor-pointer hover:scale-110 ease in duration-300 hover:bg-[#0403072a] hover:text-[#d0efff]'>
                             <AiOutlineGithub />
                           </div>
                           </Link>
                           <Link href="https://twitter.com/annor0543" target="_blank">
-                          <div className='rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease in duration-300  hover:bg-[#acabb8] hover:text-[#ffff]'>
+                          <div className='rounded-full bg-[#2a9cf45d] p-6 cursor-pointer hover:scale-110 ease in duration-300  hover:bg-[#0403072a] hover:text-[#d0efff]'>
                             <AiOutlineTwitter />
                           </div>
                           </Link>
                           <Link href="https://www.instagram.com/appiah.korang/" target="_blank">
-                          <div className='rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease in duration-300  hover:bg-[#acabb8] hover:text-[#ffff]'>
+                          <div className='rounded-full bg-[#2a9cf45d] p-6 cursor-pointer hover:scale-110 ease in duration-300  hover:bg-[#0403072a] hover:text-[#d0efff]'>
                             <BsInstagram />
                           </div>
                           </Link>
@@ -103,13 +107,16 @@ const Contact = () => {
                       
                   </div>
                   {/*right*/ }
-                  <div className='col-span-3 w-full h-auto shadow-xl shadow-gray-400 rounded-xl lg:p-4'>
+                  <div className='col-span-3 w-full h-auto bg-[#1166b127] rounded-xl lg:p-4'>
+                  {sucessAlert && (
+                                <p className='text-yellow-600 text-center mt-10 tracking'>Thank you for ontacting Stephen, 
+                                your message has been recieved and will be replied as soon as possible</p>
+                              )}
                       <div className='p-4'>
-
                           <form onSubmit={formSubmit}>
                               <div className='grid md:grid-cols-2 gap-4 w-full py-2'>
                                   <div className='flex flex-col'>
-                                      <label htmlFor='name' className='uppercase text-sm py-2'>Full Name</label>
+                                      <label htmlFor='name' className='uppercase text-sm py-2 text-[#2a9df4]'>Full Name</label>
                                       <input 
                                       name='name'
                                       id='name'
@@ -121,7 +128,7 @@ const Contact = () => {
                                       />
                                   </div>
                                     <div className='flex flex-col'>
-                                      <label htmlFor='phone' className='uppercase text-sm py-2'>Phone Number</label>
+                                      <label htmlFor='phone' className='uppercase text-sm py-2 text-[#2a9df4]'>Phone Number</label>
                                       <input 
                                       name='phone'
                                       id='phone'
@@ -134,7 +141,7 @@ const Contact = () => {
                                   </div>
                               </div>
                               <div className='flex flex-col py-4'>
-                                  <label htmlFor='email' className='uppercase text-sm py-2'>Email</label>
+                                  <label htmlFor='email' className='uppercase text-sm py-2 text-[#2a9df4]'>Email</label>
                                    <input 
                                    name='email'
                                    id='email'
@@ -146,7 +153,7 @@ const Contact = () => {
                                    />
                               </div>
                               <div className='flex flex-col py-4'>
-                                  <label  htmlFor='message' className='uppercase text-sm py-2'>Message</label>
+                                  <label  htmlFor='message' className='uppercase text-sm py-2 text-[#2a9df4]'>Message</label>
                                    <textarea 
                                    name="message"
                                    id='message'
@@ -161,20 +168,17 @@ const Contact = () => {
                               <div className='flex flex-col items-center'>
                               <button 
                                type='submit' 
-                               className='w-[50%] py-4 text-black mt-4 hover:scale-105 ease in duration-300 hover:bg-[#acabb8] hover:text-[#ffff]'>
+                               className='w-[50%] py-4 bg-[#2a9cf45d] rounded-xl mt-4 hover:scale-105 ease in duration-300 hover:bg-[#0403072a] hover:text-[#d0efff]'>
                                 SEND MESSAGE
                               </button>
                               </div>
-                              {sucessAlert && (
-                                <p className='text-[#064e3b] text-center mt-10 tracking-widest text-2xl'>Thanks for contacting Stephen</p>
-                              )}
                           </form>
                      </div>
                   </div>
               </div>
               <div className='flex justify-center py-12'> 
                   <Link href='/'>
-                      <div className='rounded-full shadow-lg shadow-gray-400 p-4 cursor-pointer hover:scale-110 hover:bg-slate-400 hover:text-white ease-in duration-300 text-[#5651e5]'>
+                      <div className='rounded-full bg-[#2a9cf45d] text-[#040307] p-4 cursor-pointer hover:scale-110 hover:bg-[#0403072a] hover:text-[#d0efff] ease-in duration-300'>
                           <HiOutlineChevronDoubleUp size={30} />
                       </div>
                   </Link>
