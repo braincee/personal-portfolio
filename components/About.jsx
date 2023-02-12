@@ -5,10 +5,10 @@ import Image from 'next/image';
 
 const About = () => {
   return (
-      <div id='about' className='max-w-[1240px] m-auto px-2 w-full md:h-screen p-2 flex-col items-center mb-20'>
-        <div className="relative mb-8 grid grid-cols-2 items-center">
-                  <div className="h-1 bg-[#9668f5] mr-2"></div>
-                  <p className='relative inline-block text-3xl pl-2'>ABOUT ME</p>
+      <div id='about' className='max-w-[1240px] m-auto px-2 w-full p-2 flex-col items-center py-[150px] about'>
+        <div className="relative mb-20 grid grid-cols-2 items-center section">
+                  <div className="h-1 bg-yellow-600"></div>
+                  <p className='relative inline-block text-3xl pl-2 text-yellow-600'>ABOUT ME</p>
                 </div>
           <div className='max-w-[1240px] m-auto md:grid grid-cols-2 gap-8'>
           <div className='flex justify-center'>
@@ -22,7 +22,7 @@ const About = () => {
           />
              </div>
               <div className='col-span-1'>
-          <p className='py-4 text-2xl ml-4'>"As a Full-Stack developer, I use modern technologies to design, 
+          <p className='py-4 text-2xl about-1'>"As a Full-Stack developer, I use modern technologies to design, 
           develop, and implement reusable user interfaces and user experience systems for websites, software 
           programs, and web-based applications. I am passionate about researching and exploring new ideas to 
           break down complex problems into smaller, more manageable solutions. I believe in the importance of 
