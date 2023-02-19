@@ -82,22 +82,22 @@ const Contact = () => {
                           <p className='uppercase pt-8 text-[#2a9df4]'>Connect With Me</p>
                           <div className='flex items-center justify-around py-4'>
                             <Link href="https://www.linkedin.com/in/stephen-annor/" target="_blank">
-                             <div className='rounded-full bg-[#2a9cf45d] p-6 cursor-pointer hover:scale-110 hover:bg-[#0403072a] hover:text-[#d0efff] ease in duration-300'>
+                             <div className='rounded-full bg-[#2a9cf45d] text-yellow-500 p-6 cursor-pointer hover:scale-105 hover:bg-yellow-500 hover:text-[#d0efff] ease in duration-300'>
                               <FaLinkedinIn />
                              </div>
                           </Link>
                           <Link href="https://github.com/braincee" target="_blank">
-                           <div className='rounded-full bg-[#2a9cf45d] p-6 cursor-pointer hover:scale-110 ease in duration-300 hover:bg-[#0403072a] hover:text-[#d0efff]'>
+                           <div className='rounded-full bg-[#2a9cf45d] text-yellow-500 p-6 cursor-pointer hover:scale-105 ease in duration-300 hover:bg-yellow-500 hover:text-[#d0efff]'>
                             <AiOutlineGithub />
                           </div>
                           </Link>
                           <Link href="https://twitter.com/annor0543" target="_blank">
-                          <div className='rounded-full bg-[#2a9cf45d] p-6 cursor-pointer hover:scale-110 ease in duration-300  hover:bg-[#0403072a] hover:text-[#d0efff]'>
+                          <div className='rounded-full bg-[#2a9cf45d] text-yellow-500 p-6 cursor-pointer hover:scale-105 ease in duration-300  hover:bg-yellow-500 hover:text-[#d0efff]'>
                             <AiOutlineTwitter />
                           </div>
                           </Link>
                           <Link href="https://www.instagram.com/appiah.korang/" target="_blank">
-                          <div className='rounded-full bg-[#2a9cf45d] p-6 cursor-pointer hover:scale-110 ease in duration-300  hover:bg-[#0403072a] hover:text-[#d0efff]'>
+                          <div className='rounded-full bg-[#2a9cf45d] text-yellow-500 p-6 cursor-pointer hover:scale-105 ease in duration-300  hover:bg-yellow-500 hover:text-[#d0efff]'>
                             <BsInstagram />
                           </div>
                           </Link>
@@ -168,7 +168,7 @@ const Contact = () => {
                               <div className='flex flex-col items-center'>
                               <button 
                                type='submit' 
-                               className='w-[50%] py-4 bg-[#2a9cf45d] rounded-xl mt-4 hover:scale-105 ease in duration-300 hover:bg-[#0403072a] hover:text-[#d0efff]'>
+                               className='w-[50%] py-4 bg-[#2a9cf45d] text-yellow-500 rounded-xl mt-4 hover:scale-105 ease in duration-300 hover:bg-yellow-500 hover:text-[#d0efff]'>
                                 SEND MESSAGE
                               </button>
                               </div>
@@ -178,7 +178,7 @@ const Contact = () => {
               </div>
               <div className='flex justify-center py-12'> 
                   <Link href='/'>
-                      <div className='rounded-full bg-[#2a9cf45d] text-[#040307] p-4 cursor-pointer hover:scale-110 hover:bg-[#0403072a] hover:text-[#d0efff] ease-in duration-300'>
+                      <div className='rounded-full bg-[#2a9cf45d] text-yellow-500 p-4 cursor-pointer hover:scale-110 hover:bg-yellow-500 hover:text-[#d0efff] ease-in duration-300'>
                           <HiOutlineChevronDoubleUp size={30} />
                       </div>
                   </Link>

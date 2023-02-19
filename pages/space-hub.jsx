@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import React from 'react';
-import calculatorImg from '../public/assets/projects/calculator.png';
+import spaceImg from '../public/assets/projects/space-hub.png';
 import { RiRadioButtonFill, RiLiveFill } from 'react-icons/ri';
 import { FaBackward } from 'react-icons/fa';
 import { FiGithub } from 'react-icons/fi'
@@ -15,12 +15,12 @@ const calculator = () => {
           className='absolute z-1'
           layout='fill'
           objectFit='cover'
-          src={calculatorImg}
+          src={spaceImg}
           alt='/calculator-image'
         />
         <div className='absolute top-[70%] max-w-[1240px] w-full left-[50%] right-[50%] translate-x-[-50%] translate-y-[-50%] text-white z-10 p-2'>
-          <h2 className='py-2 text-yellow-600'>Calculator App</h2>
-          <p>JavaScript | React JS</p>
+          <h2 className='py-2 text-yellow-600'>Space Traveller Hub</h2>
+          <p>JavaScript | React JS | Redux | Space Hub API</p>
         </div>
       </div>
 
@@ -28,23 +28,29 @@ const calculator = () => {
         <div className='col-span-10 lg:m-[20px]'>
           <p className='text-yellow-600 text-[70px] py-10 tracking-widest lg:text-[40px]'>Project Outline</p>
           <p className='italic text-[60px] m-4 lg:text-[25px]'>
-          "Math Magicians" is a website for all fans of mathematics. 
-          It is a Single Page App (SPA) that allows users to make a simple calculations 
-          and read a random math-related quote. Built with React, Sass and JavaScript.
+          The Space Travellers is a web application that provides 
+          commercial and scientific space travel services. 
+          This application will allow users to book rockets 
+          and join selected space missions : User can go to My Profile that section displays 
+          all reserved rockets and space missions.
           </p>
         <div className='flex justify-around m-2 py-20'>
             <div className='relative'>
-              <Link href='https://math-magicians-braincee.netlify.app/'>
-                <p className='rounded-full py-2 px-[30px] bg-yellow-600 flex items-center'>
+              <Link href='https://space-travellers-hub-09.vercel.app/' passHref>
+                <a target="_blank">
+                 <p className='rounded-full py-2 px-[30px] bg-yellow-600 flex items-center'>
                   <RiLiveFill size={20} className='pr-1' /> Live 
-                </p>
+                 </p>
+                </a>
                 </Link>
               </div>
             <div className='relative'>
-              <Link href='https://github.com/braincee/math-magicians'>
-                <p className='rounded-full py-2 px-[30px] bg-yellow-600 flex items-center'>
-                  <FiGithub size={20} className='pr-1' /> GitHub 
-                </p>
+              <Link href='https://github.com/braincee/React-Redux-group-project' passHref>
+                <a target="_blank">
+                 <p className='rounded-full py-2 px-[30px] bg-yellow-600 flex items-center'>
+                   <FiGithub size={20} className='pr-1' /> GitHub 
+                 </p>
+                </a>
               </Link> 
             </div>
             <div className=' relative group'>
@@ -65,6 +71,12 @@ const calculator = () => {
               </p>
               <p className='text-yellow-600 py-2 flex items-center'>
                 <RiRadioButtonFill className='pr-1' /> React JS
+              </p>
+              <p className='text-yellow-600 py-2 flex items-center'>
+                <RiRadioButtonFill className='pr-1' /> Redux JS
+              </p>
+              <p className='text-yellow-600 py-2 flex items-center'>
+                <RiRadioButtonFill className='pr-1' /> Space Hub API
               </p>
             </div>
           </div>

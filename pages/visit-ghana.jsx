@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import React from 'react';
-import calculatorImg from '../public/assets/projects/calculator.png';
+import visitImg from '../public/assets/projects/visit-ghana.png';
 import { RiRadioButtonFill, RiLiveFill } from 'react-icons/ri';
 import { FaBackward } from 'react-icons/fa';
 import { FiGithub } from 'react-icons/fi'
@@ -15,12 +15,12 @@ const calculator = () => {
           className='absolute z-1'
           layout='fill'
           objectFit='cover'
-          src={calculatorImg}
+          src={visitImg}
           alt='/calculator-image'
         />
         <div className='absolute top-[70%] max-w-[1240px] w-full left-[50%] right-[50%] translate-x-[-50%] translate-y-[-50%] text-white z-10 p-2'>
-          <h2 className='py-2 text-yellow-600'>Calculator App</h2>
-          <p>JavaScript | React JS</p>
+          <h2 className='py-2 text-yellow-600'>Visit Ghana</h2>
+          <p>JavaScript | Next JS</p>
         </div>
       </div>
 
@@ -28,20 +28,21 @@ const calculator = () => {
         <div className='col-span-10 lg:m-[20px]'>
           <p className='text-yellow-600 text-[70px] py-10 tracking-widest lg:text-[40px]'>Project Outline</p>
           <p className='italic text-[60px] m-4 lg:text-[25px]'>
-          "Math Magicians" is a website for all fans of mathematics. 
-          It is a Single Page App (SPA) that allows users to make a simple calculations 
-          and read a random math-related quote. Built with React, Sass and JavaScript.
+          Visit Ghana is my first website created with Next JS. This website consists of the 
+          history about Ghana, Regions in Ghana and Tourist Destinations in Ghana. This website 
+          gives your more information about Ghana and 
+          will make you feel like visiting my beloved country on a vacation anytime soon.
           </p>
         <div className='flex justify-around m-2 py-20'>
             <div className='relative'>
-              <Link href='https://math-magicians-braincee.netlify.app/'>
+              <Link href='https://visit-ghana.vercel.app/'>
                 <p className='rounded-full py-2 px-[30px] bg-yellow-600 flex items-center'>
                   <RiLiveFill size={20} className='pr-1' /> Live 
                 </p>
                 </Link>
               </div>
             <div className='relative'>
-              <Link href='https://github.com/braincee/math-magicians'>
+              <Link href='https://github.com/braincee/tourist-site'>
                 <p className='rounded-full py-2 px-[30px] bg-yellow-600 flex items-center'>
                   <FiGithub size={20} className='pr-1' /> GitHub 
                 </p>
@@ -64,7 +65,7 @@ const calculator = () => {
                 <RiRadioButtonFill className='pr-1' /> JavaScript
               </p>
               <p className='text-yellow-600 py-2 flex items-center'>
-                <RiRadioButtonFill className='pr-1' /> React JS
+                <RiRadioButtonFill className='pr-1' /> Next JS
               </p>
             </div>
           </div>

@@ -16,7 +16,7 @@ const Navbar = () => {
 
   useEffect(() => {
     if (
-      router.asPath === '/property' ||
+      router.asPath === '/visit-ghana' ||
       router.asPath === '/crypto' ||
       router.asPath === '/netflix' ||
       router.asPath === '/twitch'
@@ -54,7 +54,7 @@ const Navbar = () => {
           : 'fixed w-full h-20 z-[100]'
       }
     >
-      <div className='flex justify-between items-center w-full h-full px-2 2xl:px-16'>
+      <div className='flex justify-between items-center w-full h-full px-2 2xl:px-16 context-1'>
         <div className='logo'>
         <Link href='/'>
           <Image
@@ -123,7 +123,7 @@ const Navbar = () => {
               : 'fixed left-[-100%] top-0 p-10 ease-in duration-500'
           }
         >
-          <div>
+          <div className='side-drawer'>
             <div className='flex w-full items-center justify-between'>
               <Link href='/'>
                 <Image
@@ -140,73 +140,73 @@ const Navbar = () => {
                 <AiOutlineClose size={20} />
               </div>
             </div>
-            <div className='border-b border-gray-300 my-4'>
-              <p className='w-[85%] md:w-[90%] py-4 drawer-head'>
-                Let&#39;s build something legendary together
+            <div className='border-b border-gray-300 mb-2'>
+              <p className='w-[85%] md:w-[90%] pt-5 text-[20px] uppercase drawer-1'>
+                Let&#39;s change the world with technology
               </p>
             </div>
           </div>
-          <div className='py-4 flex flex-col drawer-links'>
-            <ul className='m-auto'>
+          <div className='pt-10 flex flex-col drawer-2'>
+            <ul className='m-auto text-[40px] tracking-widest'>
               <Link href='/'>
-                <li onClick={() => setNav(false)} className='py-4'>
+                <li onClick={() => setNav(false)} className='py-14'>
                   HOME
                 </li>
               </Link>
               <Link href='/#about'>
-                <li onClick={() => setNav(false)} className='py-4'>
+                <li onClick={() => setNav(false)} className='py-14'>
                   ABOUT
                 </li>
               </Link>
               <Link href='/#skills'>
-                <li onClick={() => setNav(false)} className='py-4'>
+                <li onClick={() => setNav(false)} className='py-14'>
                   SKILLS
                 </li>
               </Link>
               <Link href='/#projects'>
-                <li onClick={() => setNav(false)} className='py-4'>
+                <li onClick={() => setNav(false)} className='py-14'>
                   PROJECTS
                 </li>
               </Link>
               <Link href='/#recommendations'>
-                <li onClick={() => setNav(false)} className='py-4'>
+                <li onClick={() => setNav(false)} className='py-14'>
                   RECOMMENDATIONS
                 </li>
               </Link>
               <Link href='/#contact'>
-                <li onClick={() => setNav(false)} className='py-4'>
+                <li onClick={() => setNav(false)} className='py-14'>
                   CONTACT
                 </li>
               </Link>
             </ul>
-            <div className='drawer-bottom pt-40'>
-              <p className='text-yellow-600 uppercase tracking-widest'>
+            <div className='pt-[130px] drawer-last'>
+              <p className='text-yellow-600 uppercase tracking-widest text-[30px]'>
                 Let&#39;s Connect
               </p>
-              <div className='flex items-center justify-around my-4 w-full sm:w-[80%] drawer-icons'>
+              <div className='flex items-center justify-around my-4 w-full sm:w-[80%]'>
                 <Link href='https://www.linkedin.com/in/stephen-annor/'
                   target='_blank'
                 >
-                  <div className='rounded-full bg-yellow-600 p-5'>
-                    <FaLinkedinIn />
+                  <div className='rounded-full bg-yellow-600 p-8'>
+                    <FaLinkedinIn size={30}/>
                   </div>
                 </Link>
                 <Link
                   href='https://github.com/braincee'
                   target='_blank'
                 >
-                  <div className='rounded-full bg-yellow-600 p-5'>
-                    <FaGithub />
+                  <div className='rounded-full bg-yellow-600 p-8'>
+                    <FaGithub size={30}/>
                   </div>
                 </Link>
                 <Link href='https://twitter.com/annor0543' target='_blank'>
-                  <div className='rounded-full bg-yellow-600 p-5'>
-                    <AiOutlineTwitter />
+                  <div className='rounded-full bg-yellow-600 p-8'>
+                    <AiOutlineTwitter size={30}/>
                   </div>
                 </Link>
                 <Link href="https://www.instagram.com/appiah.korang/" target="_blank">
-                <div className='rounded-full bg-yellow-600 p-5'>
-                  <BsInstagram />
+                <div className='rounded-full bg-yellow-600 p-8'>
+                  <BsInstagram size={30}/>
                 </div>
                 </Link>
               </div>
