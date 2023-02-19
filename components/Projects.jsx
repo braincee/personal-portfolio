@@ -3,10 +3,21 @@ import visitImg from '../public/assets/projects/visit-ghana.png';
 import calculatorImg from '../public/assets/projects/calculator.png';
 import spaceImg from '../public/assets/projects/space-hub.png'
 import ProjectItem from './ProjectItem';
+import { useInView } from "react-intersection-observer";
+import { motion } from "framer-motion";
 
 const Projects = () => {
+
+  const { ref, inView } = useInView();
+
   return (
-    <div id='projects' className='w-full mb-20 projects'>
+    <div ref={ref}>
+      <motion.div
+       initial={{ opacity: 0, y: 50 }}
+       animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : 50 }}
+       transition={{ duration: 3, ease: "easeOut", delay: 0.2 }}
+      >
+      <div id='projects' className='w-full mb-20 projects'>
       <div className='max-w-[1240px] mx-auto px-2 py-16'>
       <div className="relative mb-20 grid grid-cols-2 items-center section">
           <div className="h-1 bg-yellow-600 mr-2"></div>
@@ -35,6 +46,9 @@ const Projects = () => {
         </div>
       </div>
     </div>
+      </motion.div>
+    </div>
+    
   );
 };
 

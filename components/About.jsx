@@ -1,24 +1,21 @@
 /* eslint-disable @next/next/no-img-element */
-import React, { useEffect, useRef } from 'react';
+import React from'react';
 import Image from 'next/image';
-import dynamic from 'next/dynamic'
-
+import { useInView } from 'react-intersection-observer';
+import { motion } from 'framer-motion'
 
 const About = () => {
-
-  const WOW = dynamic(() => import('wow.js'), { ssr: false });
-
-  const ref = useRef(null);
-
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-      const wow = new WOW({ boxClass: 'wow', animateClass: 'animated', offset: 0 });
-      wow.init();
-    }
-  }, []);
+   
+   const {ref, inView } = useInView();
 
   return (
-      <div id='about' className="wow fadeInRight max-w-[1240px] m-auto px-2 w-full p-2 flex-col items-center py-[150px] about" ref={ref}>
+    <div ref={ref}>
+       <motion.div
+         initial={{ opacity: 0, x: -100 }}
+         animate={{ opacity: inView ? 1 : 0, x: inView ? 0 : -100 }}
+         transition={{ duration: 3, ease: "easeOut", delay: 0.2 }}
+       >
+        <div id='about' className="max-w-[1240px] m-auto px-2 w-full p-2 flex-col items-center py-[150px] about" ref={ref}>
         <div className="relative mb-20 grid grid-cols-2 items-center section">
                   <div className="h-1 bg-yellow-600"></div>
                   <p className='relative inline-block text-3xl pl-2 text-yellow-600'>ABOUT ME</p>
@@ -46,6 +43,10 @@ const About = () => {
              </div>
           </div>
     </div>
+    </motion.div>
+    </div>
+    
+     
   )
 }
 

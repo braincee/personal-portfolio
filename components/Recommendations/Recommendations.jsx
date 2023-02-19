@@ -4,9 +4,14 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import RecommendationCard from './RecommendationCard';
 import data from './data';
+import { useInView } from "react-intersection-observer";
+import { motion } from "framer-motion";
 
 
 const Recommendations = () => {
+
+  const { ref, inView } = useInView();
+
   const settings = {
     dots: true,
     infinite: true,
@@ -18,7 +23,12 @@ const Recommendations = () => {
 
   return (
 
-    <div>
+    <div ref={ref}>
+       <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : 50 }}
+        transition={{ duration: 3, ease: "easeOut", delay: 0.2 }}
+       >
       <div id='recommendations' className='max-w-[1240px] mx-auto px-2 py-20 mb-20 recommendations'>
         <div className="relative mb-20 grid grid-cols-2 items-center section">
       <div className="h-1 bg-yellow-600 mr-2"></div>
@@ -39,6 +49,7 @@ const Recommendations = () => {
     </Slider>
     </div>
     </div>
+    </motion.div>
     </div>
   );
 

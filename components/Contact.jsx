@@ -5,8 +5,12 @@ import { HiOutlineChevronDoubleUp } from 'react-icons/hi';
 import Link from 'next/link';
 import Image from 'next/image';
 import { BsInstagram } from 'react-icons/bs';
+import { useInView } from "react-intersection-observer";
+import { motion } from "framer-motion";
 
 const Contact = () => {
+
+    const { ref, inView } = useInView();
 
     const [query, setQuery] = useState({
         name: "",
@@ -53,7 +57,12 @@ const Contact = () => {
       };
 
   return (
-      <div>
+    <div ref={ref}>
+        <motion.div
+         initial={{ opacity: 0, y: 50 }}
+         animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : 50 }}
+         transition={{ duration: 3, ease: "easeOut", delay: 0.2 }}
+        >
           <div id='contact' className='max-w-[1240px] m-auto px-2 py-16 w-full contact'>
                 <div className="relative mb-20 grid grid-cols-2 items-center section">
                   <div className="h-1 bg-yellow-600 mr-2"></div>
@@ -184,6 +193,7 @@ const Contact = () => {
                   </Link>
               </div>
           </div>
+    </motion.div>
     </div>
   )
 }
