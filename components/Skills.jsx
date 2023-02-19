@@ -3,8 +3,13 @@ import Image from 'next/image';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { useInView } from "react-intersection-observer";
+import { motion } from "framer-motion";
 
 const Skills = () => {
+
+  const { ref, inView } = useInView();
+
     const settings = {
         dots: false,
         infinite: true,
@@ -31,7 +36,12 @@ const Skills = () => {
       };
 
   return (
-<div className=''>
+    <div ref={ref}>
+       <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : 50 }}
+        transition={{ duration: 3, ease: "easeOut", delay: 0.2 }}
+       >
   <div id='skills' className='mx-auto px-2 py-[150px] md:pt-[20px] skills'>
  <div className='relative grid grid-cols-2 px-2 mb-20 items-center section'>
    <div className="h-1 bg-yellow-600 mr-2"></div>
@@ -347,7 +357,9 @@ const Skills = () => {
     </div>
     </Slider>
     </div>
-  </div>
+  </motion.div>
+    </div>
+
   )
 }
 
