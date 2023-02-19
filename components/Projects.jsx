@@ -1,8 +1,7 @@
 import React from 'react';
-import propertyImg from '../public/assets/projects/property.jpg';
+import visitImg from '../public/assets/projects/visit-ghana.png';
 import calculatorImg from '../public/assets/projects/calculator.png';
-import netflixImg from '../public/assets/projects/netflix.jpg'
-import twitchImg from '../public/assets/projects/twitch.jpg'
+import spaceImg from '../public/assets/projects/space-hub.png'
 import ProjectItem from './ProjectItem';
 
 const Projects = () => {
@@ -15,10 +14,10 @@ const Projects = () => {
         </div>
         <div className='grid md:grid-cols-3 gap-8 max-w-[90%] mx-auto'>
           <ProjectItem
-            title='Property Finder'
-            backgroundImg={propertyImg}
-            projectUrl='/property'
-            Technology="React | Redux"
+            title='Visit Ghana'
+            backgroundImg={visitImg}
+            projectUrl='/visit-ghana'
+            Technology="JavaScript | NextJS"
           />
           <ProjectItem
             title='Calculator App'
@@ -27,14 +26,11 @@ const Projects = () => {
             Technology="React | JavaScript"
           />
           <ProjectItem
-            title='Netflix App'
-            backgroundImg={netflixImg}
-            projectUrl='/netflix'
-          />
-          <ProjectItem
-            title='Twitch UI'
-            backgroundImg={twitchImg}
-            projectUrl='/twitch'
+            title='Space Travellers Hub'
+            backgroundImg={spaceImg}
+            projectUrl='/space-hub'
+            Technology="JavaScript | React JS"
+
           />
         </div>
       </div>
