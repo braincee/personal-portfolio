@@ -15,7 +15,7 @@ const Projects = () => {
       <motion.div
        initial={{ opacity: 0, y: 50 }}
        animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : 50 }}
-       transition={{ duration: 3, ease: "easeOut", delay: 0.2 }}
+       transition={{ duration: 1, ease: "easeOut", delay: 0.1 }}
       >
       <div id='projects' className='w-full mb-20 projects'>
       <div className='max-w-[1240px] mx-auto px-2 py-16'>
