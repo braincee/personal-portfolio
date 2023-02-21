@@ -17,8 +17,8 @@ const Navbar = () => {
   useEffect(() => {
     if (
       router.asPath === '/visit-ghana' ||
-      router.asPath === '/crypto' ||
-      router.asPath === '/netflix' ||
+      router.asPath === '/calculator' ||
+      router.asPath === '/space-hub' ||
       router.asPath === '/twitch'
     ) {
       setNavBg('transparent');
