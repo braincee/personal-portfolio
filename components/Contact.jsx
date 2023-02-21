@@ -61,7 +61,7 @@ const Contact = () => {
         <motion.div
          initial={{ opacity: 0, y: 50 }}
          animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : 50 }}
-         transition={{ duration: 3, ease: "easeOut", delay: 0.2 }}
+         transition={{ duration: 1, ease: "easeOut", delay: 0.1 }}
         >
           <div id='contact' className='max-w-[1240px] m-auto px-2 py-16 w-full contact'>
                 <div className="relative mb-20 grid grid-cols-2 items-center section">
