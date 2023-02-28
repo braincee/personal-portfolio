@@ -314,3 +314,6 @@ html {
   animation-fill-mode: both;
 }
 
+.image-shape {
+  shape-outside: circle(50%);
+}
