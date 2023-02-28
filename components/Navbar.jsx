@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import Logo from '../public/assets/Logo.png'
 import { AiOutlineClose, AiOutlineTwitter } from 'react-icons/ai';
 import { TiThMenuOutline } from 'react-icons/ti';
 import { FaGithub, FaLinkedinIn } from 'react-icons/fa';
@@ -58,7 +59,7 @@ const Navbar = () => {
         <div className='logo'>
         <Link href='/'>
           <Image
-            src='/../public/assets/Logo.png'
+            src={Logo}
             alt='/'
             width='70'
             height='50'
@@ -127,7 +128,7 @@ const Navbar = () => {
             <div className='flex w-full items-center justify-between'>
               <Link href='/'>
                 <Image
-                  src='/../public/assets/Logo.png'
+                  src={Logo}
                   width='70'
                   height='50'
                   alt='/'
