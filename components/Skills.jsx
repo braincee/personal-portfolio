@@ -21,6 +21,8 @@ import Render from '../public/assets/skills/render.png'
 import Rspec from '../public/assets/skills/rspec.png'
 import Netlify from '../public/assets/skills/netlify.png'
 import Tailwind from '../public/assets/skills/tailwind.png'
+import Vercel from '../public/assets/skills/vercel.png'
+import Jest from '../public/assets/skills/jest.png'
 
 
 
@@ -233,14 +235,14 @@ const Skills = () => {
     <div>
       <div className='card shadow-md hover-shadow-lg hover:scale-105 rounded-lg'>
         <div className='w-full h-full flex items-center justify-center py-5'>
-        <Image src='/../public/assets/skills/vercel.png' width="50" height="50" alt='/'/>
+        <Image src={Vercel} width="50" height="50" alt='/'/>
       </div>
      </div>
     </div>
     <div>
       <div className='card shadow-md hover-shadow-lg hover:scale-105 rounded-lg'>
         <div className='w-full h-full flex items-center justify-center py-5'>
-        <Image src='/../public/assets/skills/jest.png' width="50" height="50" alt='/'/>
+        <Image src={Jest} width="50" height="50" alt='/'/>
       </div>
      </div>
     </div>
