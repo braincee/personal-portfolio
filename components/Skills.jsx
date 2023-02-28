@@ -14,6 +14,7 @@ import Ruby from '../public/assets/skills/ruby.png'
 import Rails from '../public/assets/skills/rails5.png'
 import Firebase from '../public/assets/skills/firebase.png'
 import Postgres from '../public/assets/skills/postgresql.png'
+import VsCode from '../public/assets/skills/vscode3.png'
 
 
 
@@ -177,7 +178,7 @@ const Skills = () => {
      <div>
       <div className='card shadow-md hover-shadow-lg hover:scale-105 rounded-lg'>
         <div className='w-full h-full flex items-center justify-center py-5'>
-        <Image src='/../public/assets/skills/vscode3.png' width="50" height="50" alt='/'/>
+        <Image src={Vscode} width="50" height="50" alt='/'/>
       </div>
      </div>
     </div>
