@@ -4,6 +4,7 @@ import { AiOutlineTwitter, AiOutlineGithub } from 'react-icons/ai';
 import { HiOutlineChevronDoubleUp } from 'react-icons/hi';
 import Link from 'next/link';
 import Image from 'next/image';
+import Laptop from '../public/assets/laptop2.jpg'
 import { BsInstagram } from 'react-icons/bs';
 import { useInView } from "react-intersection-observer";
 import { motion } from "framer-motion";
@@ -76,7 +77,7 @@ const Contact = () => {
                           <div>
                               <Image
                                   className='rounded-xl hover:scale-110 ease-in duration-300'
-                                  src='../public/assets/laptop2.jpg'
+                                  src={Laptop}
                                   width='800'
                                   height='400'
                                   alt='/' />
