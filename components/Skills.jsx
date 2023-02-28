@@ -308,7 +308,7 @@ const Skills = () => {
      <div>
       <div className='card shadow-md hover-shadow-lg hover:scale-105 rounded-lg'>
         <div className='w-full h-full flex items-center justify-center py-5'>
-        <Image src='/../public/assets/skills/postgresql.png' width="50" height="50" alt='/'/>
+        <Image src={Postgres} width="50" height="50" alt='/'/>
       </div>
      </div>
     </div>
