@@ -1,38 +1,49 @@
-import React from 'react'
+/* eslint-disable @next/next/no-img-element */
+import React from'react';
+import Image from 'next/image';
+import { useInView } from 'react-intersection-observer';
+import { motion } from 'framer-motion'
 
 const About = () => {
+   
+   const {ref, inView } = useInView();
+
   return (
-      <div id='about' className='w-full md:h-screen p-2 flex items-center py-16'>
-          <div className='max-w-[1240px] m-auto md:grid grid-cols-3 gap-8'>
-              <div className='col-span-2'>
-                  <p class='uppercase text-xl tracking-widest text-[#5651e5]'>About Me</p>
-                  <h2 className='py-4 text-gray-600'>Who I Am</h2>
-                  <p className='py-4 text-gray-600'>// I am not your normal developer</p>
-                  <p className='py-4 text-gray-600'> I have spent the last 12 years in the fire service working as a
-                     professional firefighter & paramedic. I have always had a knack for
-                     technology and working with computers. In 2019 I started working
-                    with HTML & CSS to make some minor edits on a small business website
-                    that I was operating. What I thought was just a few small edits
-                        turned into a love for programming.</p>
-                  
-                  <p className='py-4 text-gray-600'>Fascinated with how intricate programming can be I was quickly drawn
-                    to learn more. I started learning javascript and was even more
-                    enthused with making websites interactive. I then started
-                    freelancing for e-commerce companies on the Shopify platform. I am
-                    now spending my time building projects with React JS, Firebase, and
-                    learning new technologies.
-                  </p>
-                  <p className='py-4 text-gray-600 underline cursor-pointer'>Checkout some of my latest projects.</p>
-             </div>
-              <div className='w-full h-auto m-auto shadow-xl shadow-gray-400 rounded-xl flex items-center justify-center p-2 hover:scale-110 ease in duration-300'>
-                   <img
-            className='rounded-xl'
-            src='https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1364&q=80'
-            alt='/'
+    <div ref={ref}>
+       <motion.div
+         initial={{ opacity: 0, x: -100 }}
+         animate={{ opacity: inView ? 1 : 0, x: inView ? 0 : -100 }}
+         transition={{ duration: 1, ease: "easeOut", delay: 0.1 }}
+       >
+        <div id='about' className="max-w-[1240px] m-auto px-2 w-full p-2 items-center py-[150px] about" ref={ref}>
+        <div className="relative mb-20 grid grid-cols-2 items-center section">
+                  <div className="h-1 bg-yellow-600"></div>
+                  <p className='relative inline-block text-3xl pl-2 text-yellow-600'>ABOUT ME</p>
+                </div>
+          <div className='max-w-[800px] mx-auto'>
+          <p style={{ float: 'left', margin: '0 0 10px 10px'}} className="image-shape">
+          <Image
+            width='300'
+            height='300'
+            src='/../public/assets/steve.png'
+            alt='stephen'
+            className='rounded-[300px]'
           />
-             </div>
+             </p>
+          <p className='py-4 text-xl about-1'>As a Full-Stack developer, I use modern technologies to design, 
+          develop, and implement reusable user interfaces and user experience systems for websites, software 
+          programs, and web-based applications. I am passionate about researching and exploring new ideas to 
+          break down complex problems into smaller, more manageable solutions. I believe in the importance of 
+          teamwork and collaboration in product development, and I embrace challenges, welcome constructive criticism, 
+          contribute effectively, and communicate clearly with team members and clients. As new technologies continue 
+          to emerge and improve, I am committed to staying up-to-date and using the most advanced tools and techniques 
+          to enhance my skills and future prospects.</p>
           </div>
     </div>
+    </motion.div>
+    </div>
+    
+     
   )
 }
 

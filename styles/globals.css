@@ -2,17 +2,31 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Babylonica&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+
 html {
   scroll-behavior: smooth;
 }
 
 @layer base {
   body {
-    @apply bg-[#ecf0f3] text-[#1f2937] tracking-wide
+    @apply bg-[#03254c]
+  
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-bold
+    @apply font-bold text-[#2a9df4]
+  }
+
+  p {
+    @apply text-[#d0efff] italic
+
+  }
+
+  li {
+    @apply text-[#d0efff]
   }
 
   h1 {
@@ -20,14 +34,286 @@ html {
   }
 
   h2 {
-    @apply text-3xl sm:text-4xl
+    @apply text-3xl sm:text-4xl tracking-widest
   }
 
   li {
     @apply cursor-pointer
   }
 
-  button {
-    @apply shadow-xl shadow-gray-400 rounded-xl uppercase bg-gradient-to-r from-[#5651e5] to-[#709dff] text-white
+}
+
+.h-1 {
+  height: 1px;
+  top: 50%;
+}
+
+.welcome {
+  font-family: 'Oswald', sans-serif;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+
+@media (max-width: 640px) {
+  .skills {
+    width: 1000px;
   }
+
+  .projects {
+    width: 1000px;
+  }
+
+  .about {
+    width: 980px;
+    padding-bottom: 0;
+  }
+
+  .about-1 {
+    width: 100%;
+    padding: 40px;
+  }
+
+  .main {
+    width: 1000px;
+    padding-top: 200px;
+  }
+
+  .recommendations {
+    width: 1000px;
+  }
+
+  .contact {
+    width: 1000px;
+  }
+
+  .card {
+    width: 800px;
+  }
+
+  .card-1 {
+    margin-left: 52px;
+  }
+  
+  .section {
+    left: 30px
+  }
+
+  .logo {
+    margin-left: 30px;
+  }
+
+  .project {
+    width: 1000px;
+  }
+
+  .project-image {
+    position: relative;
+    width: 1000px;
+    height: 500px;
+  }
+
+  .project-image-1 {
+    height: 500px;
+  }
+   
+  .footer {
+    width: 1000px;
+  }
+}
+
+
+@media (min-width: 767px) {
+  .recommendations {
+    width: 100%;
+  }
+
+  .card {
+    width: 90%;
+  }
+
+  .skills {
+    width: 100%;
+  }
+
+  .projects {
+    width: 100%;
+  }
+
+  .about {
+    width: 100%;
+  }
+
+  .main {
+    width: 100%;
+    padding-top: 140px;
+  }
+
+  .contact {
+    width: 100%;
+  }
+
+  .card-1 {
+    margin-left: 10%;
+  }
+
+  .project {
+    width: 1200px;
+  }
+
+  .project-image {
+    position: relative;
+    width: 100%;
+    height: 400px;
+  }
+
+  .project-image-1 {
+    height: 400px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .project-image {
+    position: relative;
+    width: 1500px;
+    height: 300px;
+  }
+
+  .project-image-1 {
+    height: 300px;
+  }
+
+  .project-outline {
+    width: 1500px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .project-image {
+    position: relative;
+    width: 1685px;
+    height: 250px;
+  }
+
+  .project-image-1 {
+    height: 250px;
+  }
+
+}
+
+/* side drawer */
+
+@media (min-width: 300px) {
+
+  .drawer-1 {
+    padding-top: 50px;
+  }
+
+  .drawer-last {
+    padding-top: 100px;
+  }
+
+  .drawer-2 {
+    padding-top: 100px;
+  }
+}
+
+@media (max-width: 290px) {
+  .side-drawer {
+    min-height: 400px;
+  }
+
+  .drawer-1 {
+    padding-top: 50px;
+  }
+
+  .drawer-2 {
+    gap: 150px;
+  }
+}
+
+@media (min-width: 380px) {
+  .drawer-last {
+    padding-top: 200px;
+  }
+}
+
+@media (min-width: 420px) {
+  .drawer-last {
+    padding-top: 100px;
+  }
+
+  .drawer-1 {
+    padding-top: 50px;
+  }
+
+  .drawer-2 {
+    padding-top: 100px;
+  }
+
+  .drawer-2 li {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}
+
+@keyframes context-fade {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.context {
+  animation-name: context-fade;
+  animation-duration: 4s;
+  animation-fill-mode: both;
+}
+
+@keyframes context-1 {
+  from {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  to {
+    opacity: 4;
+    transform: translateY(0);
+  }
+}
+
+.context-1 {
+  animation-name: context-1;
+  animation-duration: 4s;
+  animation-fill-mode: both;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.fade-1 {
+  animation-name: fadeIn;
+  animation-duration: 4s;
+  animation-fill-mode: both;
+}
+
+.image-shape {
+  shape-outside: circle(50%);
 }

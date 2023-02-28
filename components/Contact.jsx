@@ -1,92 +1,199 @@
-import React from 'react'
-import { FaLinkedinIn } from 'react-icons/fa'
-import { AiOutlineTwitter, AiOutlineGithub, AiOutlineMail } from 'react-icons/ai'
-import { HiOutlineChevronDoubleUp } from 'react-icons/hi'
-import Link from 'next/link'
+import React, { useState } from 'react';
+import { FaLinkedinIn } from 'react-icons/fa';
+import { AiOutlineTwitter, AiOutlineGithub } from 'react-icons/ai';
+import { HiOutlineChevronDoubleUp } from 'react-icons/hi';
+import Link from 'next/link';
+import Image from 'next/image';
+import { BsInstagram } from 'react-icons/bs';
+import { useInView } from "react-intersection-observer";
+import { motion } from "framer-motion";
 
 const Contact = () => {
+
+    const { ref, inView } = useInView();
+
+    const [query, setQuery] = useState({
+        name: "",
+        phone: "",
+        email: "",
+        message: ""
+      });
+
+    const [sucessAlert, setSuccessAlert ] = useState(false);
+    
+      // Update inputs value
+      const handleParam = () => (e) => {
+        const name = e.target.name;
+        const phone = e.target.phone;
+        const email = e.target.email;
+        const message = e.target.message;
+        const value = e.target.value;
+        setQuery((prevState) => ({
+          ...prevState,
+          [name]: value,
+          [phone]: value,
+          [email]: value,
+          [message]: value
+        }));
+      };
+
+      // Form Submit function
+      const formSubmit = (e) => {
+        e.preventDefault();
+        const formData = new FormData();
+        Object.entries(query).forEach(([key, value]) => {
+          formData.append(key, value);
+        });
+        fetch("https://getform.io/f/e97fa24b-987e-4516-88e1-3dd24a4aa412", {
+          method: "POST",
+          body: formData
+        }).then(() => setQuery({ name: "", phone: "", email: "", message: "" }));
+
+        setSuccessAlert(true);
+        setTimeout(() => {
+            setSuccessAlert(false);
+        }, 7000);
+
+      };
+
   return (
-      <div>
-          <div id='contact' className='max-w-[1240px] m-auto px-2 py-16 w-full'>
-              <p className='text-xl tracking-widest uppercase text-[#5651e5]'>Contact</p>
-              <h2 className='py-4'>Get In Touch</h2>
-              <div className='grid lg:grid-cols-5 gap-8'>
+    <div ref={ref}>
+        <motion.div
+         initial={{ opacity: 0, y: 50 }}
+         animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : 50 }}
+         transition={{ duration: 1, ease: "easeOut", delay: 0.1 }}
+        >
+          <div id='contact' className='max-w-[1240px] m-auto px-2 py-16 w-full contact'>
+                <div className="relative mb-20 grid grid-cols-2 items-center section">
+                  <div className="h-1 bg-yellow-600 mr-2"></div>
+                  <p className='relative inline-block text-3xl pl-2 text-yellow-600'>GET IN TOUCH</p>
+                </div>
+              <div className='grid lg:grid-cols-5 gap-8 contact-1'>
                   {/*left*/ }
 
-                  <div className='col-span-3 lg:col-span-2 w-full h-full shadow-xl shadow-gray-400 rounded-xl p-4'>
+                  <div className='col-span-3 lg:col-span-2 w-full h-full bg-[#1166b127] rounded-xl p-4'>
                       <div className='lg:p-4 h-full'>
                           <div>
-                              <img
+                              <Image
                                   className='rounded-xl hover:scale-110 ease-in duration-300'
-                                  src='https://images.unsplash.com/photo-1516387938699-a93567ec168e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2671&q=80'
+                                  src='/../public/assets/laptop2.jpg'
+                                  width='800'
+                                  height='400'
                                   alt='/' />
                           </div>
                           <div>
-                              <h2 className='py-2'>Stephen Annnor</h2>
-                              <p>Full-Stack Developer</p>
-                              <p className='py-4'> I am available for freelance or full-time positions. Contact
+                              <p className='py-2 text-[#2a9df4] text-3xl tracking-widest'>Stephen Annnor</p>
+                              <p className='text-[#2a9df4] text-xl tracking-widest'>Full-Stack Developer</p>
+                              <p className='py-4 text-[#2a9df4]'> I am available for freelance or full-time positions. Contact
                                  me and let's talk.</p>
                           </div>
                           <div>
-                          <p className='uppercase pt-8'>Connect With Me</p>
-                          <div className='flex items-center justify-between py-4'>
-                              <div className='rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 hover:bg-[#acabb8] hover:text-[#ffff] ease in duration-300'>
-                            <FaLinkedinIn />
-                          </div>
-                        <div className='rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease in duration-300 hover:bg-[#acabb8] hover:text-[#ffff]'>
+                          <p className='uppercase pt-8 text-[#2a9df4]'>Connect With Me</p>
+                          <div className='flex items-center justify-around py-4'>
+                            <Link href="https://www.linkedin.com/in/stephen-annor/" target="_blank">
+                             <div className='rounded-full bg-[#2a9cf45d] text-yellow-500 p-6 cursor-pointer hover:scale-105 hover:bg-yellow-500 hover:text-[#d0efff] ease in duration-300'>
+                              <FaLinkedinIn />
+                             </div>
+                          </Link>
+                          <Link href="https://github.com/braincee" target="_blank">
+                           <div className='rounded-full bg-[#2a9cf45d] text-yellow-500 p-6 cursor-pointer hover:scale-105 ease in duration-300 hover:bg-yellow-500 hover:text-[#d0efff]'>
                             <AiOutlineGithub />
                           </div>
-                        <div className='rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease in duration-300  hover:bg-[#acabb8] hover:text-[#ffff]'>
+                          </Link>
+                          <Link href="https://twitter.com/annor0543" target="_blank">
+                          <div className='rounded-full bg-[#2a9cf45d] text-yellow-500 p-6 cursor-pointer hover:scale-105 ease in duration-300  hover:bg-yellow-500 hover:text-[#d0efff]'>
                             <AiOutlineTwitter />
                           </div>
-                        <div className='rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease in duration-300  hover:bg-[#acabb8] hover:text-[#ffff]'>
-                            <AiOutlineMail />
+                          </Link>
+                          <Link href="https://www.instagram.com/appiah.korang/" target="_blank">
+                          <div className='rounded-full bg-[#2a9cf45d] text-yellow-500 p-6 cursor-pointer hover:scale-105 ease in duration-300  hover:bg-yellow-500 hover:text-[#d0efff]'>
+                            <BsInstagram />
                           </div>
-                          </div>
+                          </Link>
+                        </div>
                       </div>
                       </div>
                       
                   </div>
                   {/*right*/ }
-                  <div className='col-span-3 w-full h-auto shadow-xl shadow-gray-400 rounded-xl lg:p-4'>
+                  <div className='col-span-3 w-full h-auto bg-[#1166b127] rounded-xl lg:p-4'>
+                  {sucessAlert && (
+                                <p className='text-yellow-600 text-center mt-10 tracking'>Thank you for ontacting Stephen, 
+                                your message has been recieved and will be replied as soon as possible</p>
+                              )}
                       <div className='p-4'>
-
-                          <form>
+                          <form onSubmit={formSubmit}>
                               <div className='grid md:grid-cols-2 gap-4 w-full py-2'>
                                   <div className='flex flex-col'>
-                                      <label className='uppercase text-sm py-2'>Name</label>
-                                      <input className='border-2 rounded-lg p-3 flex border-gray-300' type="text"/>
+                                      <label htmlFor='name' className='uppercase text-sm py-2 text-[#2a9df4]'>Full Name</label>
+                                      <input 
+                                      name='name'
+                                      id='name'
+                                      className='border-2 rounded-lg p-3 flex border-gray-300'
+                                      type="text"
+                                      required
+                                      value={query.name}
+                                      onChange={handleParam()}
+                                      />
                                   </div>
                                     <div className='flex flex-col'>
-                                      <label className='uppercase text-sm py-2'>Phone Number</label>
-                                      <input className='border-2 rounded-lg p-3 flex border-gray-300' type="text"/>
+                                      <label htmlFor='phone' className='uppercase text-sm py-2 text-[#2a9df4]'>Phone Number</label>
+                                      <input 
+                                      name='phone'
+                                      id='phone'
+                                      className='border-2 rounded-lg p-3 flex border-gray-300'
+                                      type="text"
+                                      required
+                                      value={query.phone}
+                                      onChange={handleParam()}
+                                      />
                                   </div>
                               </div>
                               <div className='flex flex-col py-4'>
-                                  <label className='uppercase text-sm py-2'>Email</label>
-                                   <input className='border-2 rounded-lg p-3 flex border-gray-300' type="email"/>
+                                  <label htmlFor='email' className='uppercase text-sm py-2 text-[#2a9df4]'>Email</label>
+                                   <input 
+                                   name='email'
+                                   id='email'
+                                   type='email'
+                                   className='border-2 rounded-lg p-3 flex border-gray-300'
+                                   required
+                                   value={query.email}
+                                   onChange={handleParam()}
+                                   />
                               </div>
                               <div className='flex flex-col py-4'>
-                                  <label className='uppercase text-sm py-2'>Subject</label>
-                                   <input className='border-2 rounded-lg p-3 flex border-gray-300' type="subject"/>
+                                  <label  htmlFor='message' className='uppercase text-sm py-2 text-[#2a9df4]'>Message</label>
+                                   <textarea 
+                                   name="message"
+                                   id='message'
+                                   className='border-2 rounded-lg p-3 border-gray-300'
+                                   rows='4'
+                                   required
+                                   value={query.message}
+                                   onChange={handleParam()}
+                                   >
+                                   </textarea>
                               </div>
-                              <div className='flex flex-col py-4'>
-                                  <label className='uppercase text-sm py-2'>Message</label>
-                                   <textarea className='border-2 rounded-lg p-3 border-gray-300' rows='6'></textarea>
+                              <div className='flex flex-col items-center'>
+                              <button 
+                               type='submit' 
+                               className='w-[50%] py-4 bg-[#2a9cf45d] text-yellow-500 rounded-xl mt-4 hover:scale-105 ease in duration-300 hover:bg-yellow-500 hover:text-[#d0efff]'>
+                                SEND MESSAGE
+                              </button>
                               </div>
-                              <button className='w-full py-4 text-gray-300 mt-4'>SEND MESSAGE</button>
                           </form>
                      </div>
                   </div>
               </div>
               <div className='flex justify-center py-12'> 
                   <Link href='/'>
-                      <div className='rounded-full shadow-lg shadow-gray-400 p-4 cursor-pointer hover:scale-110 hover:bg-slate-400 hover:text-white ease-in duration-300 text-[#5651e5]'>
+                      <div className='rounded-full bg-[#2a9cf45d] text-yellow-500 p-4 cursor-pointer hover:scale-110 hover:bg-yellow-500 hover:text-[#d0efff] ease-in duration-300'>
                           <HiOutlineChevronDoubleUp size={30} />
                       </div>
                   </Link>
               </div>
           </div>
+    </motion.div>
     </div>
   )
 }

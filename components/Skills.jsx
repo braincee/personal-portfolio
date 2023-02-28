@@ -1,125 +1,365 @@
-import React from 'react'
-import Image from 'next/image'
+import React from 'react';
+import Image from 'next/image';
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import { useInView } from "react-intersection-observer";
+import { motion } from "framer-motion";
 
 const Skills = () => {
-  return (
-    <div id='skills' className='w-full lg:h-screen p-2'>
-      <div className='max-w-[1240px] flex flex-col mx-auto justify-center h-full'>
-        <p className='uppercase text-xl tracking-widest text-[#5651e5] '>skills</p>
-        <h2 className='py-4'>What i can do</h2>
-        <div className='grid md:grid-cols-2 lg:grid-cols-4 gap-8'>
-          <div className='p-6 shadow-xl rounded-xl hover:scale-105 ease in duration-300'>
-            <div className='grid grid-cols-2 gap-4 jsutify-center items-center'>
-              <div className='m-auto'>
-                 <Image src='/../public/assets/skills/html.png' width="64px" height="64px" alt='/'/>
-              </div>
-              <div>
-                <h3 className='flex flex-col items-center justify-center'>
-                  HTML
-                </h3>
-              </div>
-            </div>
-          </div>
-          <div className='p-6 shadow-xl rounded-xl hover:scale-105 ease in duration-300'>
-            <div className='grid grid-cols-2 gap-4 jsutify-center items-center'>
-              <div className='m-auto'>
-                 <Image src='/../public/assets/skills/css.png' width="64px" height="64px" alt='/'/>
-              </div>
-              <div>
-                <h3 className='flex flex-col items-center justify-center'>
-                  CSS
-                </h3>
-              </div>
-            </div>
-          </div>
-          <div className='p-6 shadow-xl rounded-xl hover:scale-105 ease in duration-300'>
-            <div className='grid grid-cols-2 gap-4 jsutify-center items-center'>
-              <div className='m-auto'>
-                 <Image src='/../public/assets/skills/javascript.png' width="64px" height="64px" alt='/'/>
-              </div>
-              <div>
-                <h3 className='flex flex-col items-center justify-center'>
-                  JavaScript
-                </h3>
-              </div>
-            </div>
-          </div>
-          <div className='p-6 shadow-xl rounded-xl hover:scale-105 ease in duration-300'>
-            <div className='grid grid-cols-2 gap-4 jsutify-center items-center'>
-              <div className='m-auto'>
-                 <Image src='/../public/assets/skills/react.png' width="64px" height="64px" alt='/'/>
-              </div>
-              <div>
-                <h3 className='flex flex-col items-center justify-center'>
-                  React
-                </h3>
-              </div>
-            </div>
-          </div>
-          <div className='p-6 shadow-xl rounded-xl hover:scale-105 ease in duration-300'>
-            <div className='grid grid-cols-2 gap-4 jsutify-center items-center'>
-              <div className='m-auto'>
-                 <Image src='/../public/assets/skills/github1.png' width="64px" height="64px" alt='/'/>
-              </div>
-              <div>
-                <h3 className='flex flex-col items-center justify-center'>
-                  Github
-                </h3>
-              </div>
-            </div>
-          </div>
-          <div className='p-6 shadow-xl rounded-xl hover:scale-105 ease in duration-300'>
-            <div className='grid grid-cols-2 gap-4 jsutify-center items-center'>
-              <div className='m-auto'>
-                 <Image src='/../public/assets/skills/firebase.png' width="64px" height="64px" alt='/'/>
-              </div>
-              <div>
-                <h3 className='flex flex-col items-center justify-center'>
-                  firebase
-                </h3>
-              </div>
-            </div>
-          </div>
-          <div className='p-6 shadow-xl rounded-xl hover:scale-105 ease in duration-300'>
-            <div className='grid grid-cols-2 gap-4 jsutify-center items-center'>
-              <div className='m-auto'>
-                 <Image src='/../public/assets/skills/mongo.png' width="64px" height="64px" alt='/'/>
-              </div>
-              <div>
-                <h3 className='flex flex-col items-center justify-center'>
-                  Mongo
-                </h3>
-              </div>
-            </div>
-          </div>
-          <div className='p-6 shadow-xl rounded-xl hover:scale-105 ease in duration-300'>
-            <div className='grid grid-cols-2 gap-4 jsutify-center items-center'>
-              <div className='m-auto'>
-                 <Image src='/../public/assets/skills/shopify.png' width="64px" height="64px" alt='/'/>
-              </div>
-              <div>
-                <h3 className='flex flex-col items-center justify-center'>
-                  Shopify
-                </h3>
-              </div>
-            </div>
-          </div>
-          <div className='p-6 shadow-xl rounded-xl hover:scale-105 ease in duration-300'>
-            <div className='grid grid-cols-2 gap-4 jsutify-center items-center'>
-              <div className='m-auto'>
-                 <Image src='/../public/assets/skills/tailwind.png' width="64px" height="64px" alt='/'/>
-              </div>
-              <div>
-                <h3 className='flex flex-col items-center justify-center'>
-                  Tailwind
-                </h3>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
 
+  const { ref, inView } = useInView();
+
+    const settings = {
+        dots: false,
+        infinite: true,
+        slidesToShow: 5,
+        slidesToScroll: 1,
+        autoplay: true,
+        speed: 2000,
+        autoplaySpeed: 2000,
+        cssEase: "linear",
+        arrows: false,
+    };
+
+    const bottomSettings = {
+        dots: false,
+        infinite: true,
+        slidesToShow: 5,
+        slidesToScroll: 1,
+        autoplay: true,
+        speed: 2000,
+        autoplaySpeed: 2000,
+        cssEase: "linear",
+        rtl: true,
+        arrows: false,
+      };
+
+  return (
+    <div ref={ref}>
+       <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : 50 }}
+        transition={{ duration: 1, ease: "easeOut", delay: 0.1 }}
+       >
+  <div id='skills' className='mx-auto px-2 py-[150px] md:pt-[20px] skills'>
+ <div className='relative grid grid-cols-2 px-2 mb-20 items-center section'>
+   <div className="h-1 bg-yellow-600 mr-2"></div>
+    <p className='relative inline-block text-3xl pl-2 text-yellow-600'>TECHNICAL SKILLS</p>
+  </div>
+  <div className='grid grid-cols-3 mb-20 ml-6 md:flex justify-center'>
+  <div className='mb-4 flex flex-col pr-12'>
+        <h3 className='text-lg font-bold'>LANGUAGES</h3>
+        <hr className='border-b-1 border-gray-400 mt-1' />
+        <ul className='mt-3'>
+          <li>JavaScript</li>
+          <li>React</li>
+          <li>Redux</li>
+          <li>Ruby</li>
+          <li>Rails</li>
+          <li>Bootstrap</li>
+          <li>Tailwind</li>
+        </ul>
+      </div>
+      <div className='mb-4 flex flex-col pr-10'>
+        <h3 className='text-lg font-bold'>DATABASE</h3>
+        <hr className='border-b-1 border-gray-400 mt-1' />
+        <ul className='mt-3'>
+            <li>MySQL</li>
+            <li>PostgreSQL</li>
+            <li>Firebase</li>
+        </ul>
+      </div>
+      <div className='mb-4 flex flex-col pr-10'>
+        <h3 className='text-lg font-bold'>DEPLOYMENT</h3>
+        <hr className='border-b-1 border-gray-400 mt-1' />
+        <ul className='mt-3'>
+            <li>GitHub Pages</li>
+            <li>Netlify</li>
+            <li>Vercel</li>
+            <li>Render</li>
+        </ul>
+      </div>
+      <div className='mb-4 flex flex-col pr-10'>
+        <h3 className='text-lg font-bold'>TOOLS</h3>
+        <hr className='border-b-1 border-gray-400 mt-1' />
+        <ul className='mt-3'>
+            <li>Git</li>
+            <li>GitHub</li>
+            <li>VsCode</li>
+        </ul>
+      </div>
+      <div className='mb-4 flex flex-col'>
+        <h3 className='text-lg font-bold'>TESTING</h3>
+        <hr className='border-b-1 border-gray-400 mt-1' />
+        <ul className='mt-3'>
+            <li>Jest</li>
+            <li>Rspec</li>
+            <li>Capybara</li>
+        </ul>
+      </div>
+      </div>
+    <Slider {...settings}>
+     <div>
+      <div className='card shadow-md hover-shadow-lg hover:scale-105 rounded-lg'>
+        <div className='w-full h-full flex items-center justify-center py-5'>
+        <Image src='/../public/assets/skills/html.png' width="50" height="50" alt='/'/>
+      </div>
+     </div>
+     </div>
+     <div>
+      <div className='card shadow-md hover-shadow-lg hover:scale-105 rounded-lg'>
+        <div className='w-full h-full flex items-center justify-center py-5'>
+        <Image src='/../public/assets/skills/css.png' width="50" height="50" alt='/'/>
+      </div>
+     </div>
+     </div>
+     <div>
+      <div className='card shadow-md hover-shadow-lg hover:scale-105 rounded-lg'>
+        <div className='w-full h-full flex items-center justify-center py-5'>
+        <Image src='/../public/assets/skills/javascript.png' width="50" height="50" alt='/'/>
+      </div>
+     </div>
+     </div>
+     <div>
+      <div className='card shadow-md hover-shadow-lg hover:scale-105 rounded-lg'>
+        <div className='w-full h-full flex items-center justify-center py-5'>
+        <Image src='/../public/assets/skills/react.png' width="50" height="50" alt='/'/>
+      </div>
+     </div>
+     </div>
+     <div>
+      <div className='card shadow-md hover-shadow-lg hover:scale-105 rounded-lg'>
+        <div className='w-full h-full flex items-center justify-center py-5'>
+        <Image src='/../public/assets/skills/redux2.png' width="50" height="50" alt='/'/>
+      </div>
+     </div>
+     </div>
+     <div>
+      <div className='card shadow-md hover-shadow-lg hover:scale-105 rounded-lg'>
+        <div className='w-full h-full flex items-center justify-center py-5'>
+        <Image src='/../public/assets/skills/ruby.png' width="50" height="50" alt='/'/>
+      </div>
+     </div>
+     </div>
+     <div>
+      <div className='card shadow-md hover-shadow-lg hover:scale-105 rounded-lg'>
+        <div className='w-full h-full flex items-center justify-center py-5'>
+        <Image src='/../public/assets/skills/rails5.png' width="50" height="50" alt='/'/>
+      </div>
+     </div>
+     </div>
+     <div>
+      <div className='card shadow-md hover-shadow-lg hover:scale-105 rounded-lg'>
+        <div className='w-full h-full flex items-center justify-center py-5'>
+        <Image src='/../public/assets/skills/firebase.png' width="50" height="50" alt='/'/>
+      </div>
+     </div>
+     </div>
+     <div>
+      <div className='card shadow-md hover-shadow-lg hover:scale-105 rounded-lg'>
+        <div className='w-full h-full flex items-center justify-center py-5'>
+        <Image src='/../public/assets/skills/postgresql.png' width="50" height="50" alt='/'/>
+      </div>
+     </div>
+     </div>
+     <div>
+      <div className='card shadow-md hover-shadow-lg hover:scale-105 rounded-lg'>
+        <div className='w-full h-full flex items-center justify-center py-5'>
+        <Image src='/../public/assets/skills/vscode3.png' width="50" height="50" alt='/'/>
+      </div>
+     </div>
     </div>
+    <div>
+      <div className='card shadow-md hover-shadow-lg hover:scale-105 rounded-lg'>
+        <div className='w-full h-full flex items-center justify-center py-5'>
+        <Image src='/../public/assets/skills/github.png' width="50" height="50" alt='/'/>
+      </div>
+     </div>
+    </div>
+    <div>
+      <div className='card shadow-md hover-shadow-lg hover:scale-105 rounded-lg'>
+        <div className='w-full h-full flex items-center justify-center py-5'>
+        <Image src='/../public/assets/skills/git.png' width="50" height="50" alt='/'/>
+      </div>
+     </div>
+    </div>
+    <div>
+      <div className='card shadow-md hover-shadow-lg hover:scale-105 rounded-lg'>
+        <div className='w-full h-full flex items-center justify-center py-5'>
+        <Image src='/../public/assets/skills/render.png' width="50" height="50" alt='/'/>
+      </div>
+     </div>
+    </div>
+    <div>
+      <div className='card shadow-md hover-shadow-lg hover:scale-105 rounded-lg'>
+        <div className='w-full h-full flex items-center justify-center py-5'>
+        <Image src='/../public/assets/skills/rspec.png' width="50" height="50" alt='/'/>
+      </div>
+     </div>
+    </div>
+    <div>
+      <div className='card shadow-md hover-shadow-lg hover:scale-105 rounded-lg'>
+        <div className='w-full h-full flex items-center justify-center py-5'>
+        <Image src='/../public/assets/skills/netlify.png' width="50" height="50" alt='/'/>
+      </div>
+     </div>
+    </div>
+    <div>
+      <div className='card shadow-md hover-shadow-lg hover:scale-105 rounded-lg'>
+        <div className='w-full h-full flex items-center justify-center py-5'>
+        <Image src='/../public/assets/skills/tailwind.png' width="50" height="50" alt='/'/>
+      </div>
+     </div>
+    </div>
+    <div>
+      <div className='card shadow-md hover-shadow-lg hover:scale-105 rounded-lg'>
+        <div className='w-full h-full flex items-center justify-center py-5'>
+        <Image src='/../public/assets/skills/vercel.png' width="50" height="50" alt='/'/>
+      </div>
+     </div>
+    </div>
+    <div>
+      <div className='card shadow-md hover-shadow-lg hover:scale-105 rounded-lg'>
+        <div className='w-full h-full flex items-center justify-center py-5'>
+        <Image src='/../public/assets/skills/jest.png' width="50" height="50" alt='/'/>
+      </div>
+     </div>
+    </div>
+    </Slider>
+    <div className='mb-10'></div>
+    <Slider {...bottomSettings}>
+    <div>
+      <div className='card shadow-md hover-shadow-lg hover:scale-105 rounded-lg'>
+        <div className='w-full h-full flex items-center justify-center py-5'>
+        <Image src='/../public/assets/skills/html.png' width="50" height="50" alt='/'/>
+      </div>
+     </div>
+     </div>
+     <div>
+      <div className='card shadow-md hover-shadow-lg hover:scale-105 rounded-lg'>
+        <div className='w-full h-full flex items-center justify-center py-5'>
+        <Image src='/../public/assets/skills/css.png' width="50" height="50" alt='/'/>
+      </div>
+     </div>
+     </div>
+     <div>
+      <div className='card shadow-md hover-shadow-lg hover:scale-105 rounded-lg'>
+        <div className='w-full h-full flex items-center justify-center py-5'>
+        <Image src='/../public/assets/skills/javascript.png' width="50" height="50" alt='/'/>
+      </div>
+     </div>
+     </div>
+     <div>
+      <div className='card shadow-md hover-shadow-lg hover:scale-105 rounded-lg'>
+        <div className='w-full h-full flex items-center justify-center py-5'>
+        <Image src='/../public/assets/skills/react.png' width="50" height="50" alt='/'/>
+      </div>
+     </div>
+     </div>
+     <div>
+      <div className='card shadow-md hover-shadow-lg hover:scale-105 rounded-lg'>
+        <div className='w-full h-full flex items-center justify-center py-5'>
+        <Image src='/../public/assets/skills/redux2.png' width="50" height="50" alt='/'/>
+      </div>
+     </div>
+     </div>
+     <div>
+      <div className='card shadow-md hover-shadow-lg hover:scale-105 rounded-lg'>
+        <div className='w-full h-full flex items-center justify-center py-5'>
+        <Image src='/../public/assets/skills/ruby.png' width="50" height="50" alt='/'/>
+      </div>
+     </div>
+     </div>
+     <div>
+      <div className='card shadow-md hover-shadow-lg hover:scale-105 rounded-lg'>
+        <div className='w-full h-full flex items-center justify-center py-5'>
+        <Image src='/../public/assets/skills/rails5.png' width="50" height="50" alt='/'/>
+      </div>
+     </div>
+     </div>
+     <div>
+      <div className='card shadow-md hover-shadow-lg hover:scale-105 rounded-lg'>
+        <div className='w-full h-full flex items-center justify-center py-5'>
+        <Image src='/../public/assets/skills/firebase.png' width="50" height="50" alt='/'/>
+      </div>
+     </div>
+     </div>
+     <div>
+      <div className='card shadow-md hover-shadow-lg hover:scale-105 rounded-lg'>
+        <div className='w-full h-full flex items-center justify-center py-5'>
+        <Image src='/../public/assets/skills/postgresql.png' width="50" height="50" alt='/'/>
+      </div>
+     </div>
+    </div>
+    <div>
+      <div className='card shadow-md hover-shadow-lg hover:scale-105 rounded-lg'>
+        <div className='w-full h-full flex items-center justify-center py-5'>
+        <Image src='/../public/assets/skills/vscode3.png' width="50" height="50" alt='/'/>
+      </div>
+     </div>
+    </div>
+    <div>
+      <div className='card shadow-md hover-shadow-lg hover:scale-105 rounded-lg'>
+        <div className='w-full h-full flex items-center justify-center py-5'>
+        <Image src='/../public/assets/skills/github.png' width="50" height="50" alt='/'/>
+      </div>
+     </div>
+    </div>
+    <div>
+      <div className='card shadow-md hover-shadow-lg hover:scale-105 rounded-lg'>
+        <div className='w-full h-full flex items-center justify-center py-5'>
+        <Image src='/../public/assets/skills/git.png' width="50" height="50" alt='/'/>
+      </div>
+     </div>
+    </div>
+    <div>
+      <div className='card shadow-md hover-shadow-lg hover:scale-105 rounded-lg'>
+        <div className='w-full h-full flex items-center justify-center py-5'>
+        <Image src='/../public/assets/skills/render.png' width="50" height="50" alt='/'/>
+      </div>
+     </div>
+    </div>
+    <div>
+      <div className='card shadow-md hover-shadow-lg hover:scale-105 rounded-lg'>
+        <div className='w-full h-full flex items-center justify-center py-5'>
+        <Image src='/../public/assets/skills/rspec.png' width="50" height="50" alt='/'/>
+      </div>
+     </div>
+    </div>
+    <div>
+      <div className='card shadow-md hover-shadow-lg hover:scale-105 rounded-lg'>
+        <div className='w-full h-full flex items-center justify-center py-5'>
+        <Image src='/../public/assets/skills/netlify.png' width="50" height="50" alt='/'/>
+      </div>
+     </div>
+    </div>
+    <div>
+      <div className='card shadow-md hover-shadow-lg hover:scale-105 rounded-lg'>
+        <div className='w-full h-full flex items-center justify-center py-5'>
+        <Image src='/../public/assets/skills/tailwind.png' width="50" height="50" alt='/'/>
+      </div>
+     </div>
+    </div>
+    <div>
+      <div className='card shadow-md hover-shadow-lg hover:scale-105 rounded-lg'>
+        <div className='w-full h-full flex items-center justify-center py-5'>
+        <Image src='/../public/assets/skills/vercel.png' width="50" height="50" alt='/'/>
+      </div>
+     </div>
+    </div>
+    <div>
+      <div className='card shadow-md hover-shadow-lg hover:scale-105 rounded-lg'>
+        <div className='w-full h-full flex items-center justify-center py-5'>
+        <Image src='/../public/assets/skills/jest.png' width="50" height="50" alt='/'/>
+      </div>
+     </div>
+    </div>
+    </Slider>
+    </div>
+  </motion.div>
+    </div>
+
   )
 }
 
