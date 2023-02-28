@@ -19,6 +19,8 @@ import Github from '../public/assets/skills/github.png'
 import Git from '../public/assets/skills/git.png'
 import Render from '../public/assets/skills/render.png'
 import Rspec from '../public/assets/skills/rspec.png'
+import Netlify from '../public/assets/skills/netlify.png'
+import Tailwind from '../public/assets/skills/tailwind.png'
 
 
 
@@ -217,14 +219,14 @@ const Skills = () => {
     <div>
       <div className='card shadow-md hover-shadow-lg hover:scale-105 rounded-lg'>
         <div className='w-full h-full flex items-center justify-center py-5'>
-        <Image src='/../public/assets/skills/netlify.png' width="50" height="50" alt='/'/>
+        <Image src={Netlify} width="50" height="50" alt='/'/>
       </div>
      </div>
     </div>
     <div>
       <div className='card shadow-md hover-shadow-lg hover:scale-105 rounded-lg'>
         <div className='w-full h-full flex items-center justify-center py-5'>
-        <Image src='/../public/assets/skills/tailwind.png' width="50" height="50" alt='/'/>
+        <Image src={Tailwind} width="50" height="50" alt='/'/>
       </div>
      </div>
     </div>
