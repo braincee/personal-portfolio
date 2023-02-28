@@ -14,7 +14,11 @@ import Ruby from '../public/assets/skills/ruby.png'
 import Rails from '../public/assets/skills/rails5.png'
 import Firebase from '../public/assets/skills/firebase.png'
 import Postgres from '../public/assets/skills/postgresql.png'
-import VsCode from '../public/assets/skills/vscode3.png'
+import Vscode from '../public/assets/skills/vscode3.png'
+import Github from '../public/assets/skills/github.png'
+import Git from '../public/assets/skills/git.png'
+import Render from '../public/assets/skills/render.png'
+import Rspec from '../public/assets/skills/rspec.png'
 
 
 
@@ -185,28 +189,28 @@ const Skills = () => {
     <div>
       <div className='card shadow-md hover-shadow-lg hover:scale-105 rounded-lg'>
         <div className='w-full h-full flex items-center justify-center py-5'>
-        <Image src='/../public/assets/skills/github.png' width="50" height="50" alt='/'/>
+        <Image src={Github} width="50" height="50" alt='/'/>
       </div>
      </div>
     </div>
     <div>
       <div className='card shadow-md hover-shadow-lg hover:scale-105 rounded-lg'>
         <div className='w-full h-full flex items-center justify-center py-5'>
-        <Image src='/../public/assets/skills/git.png' width="50" height="50" alt='/'/>
+        <Image src={Git} width="50" height="50" alt='/'/>
       </div>
      </div>
     </div>
     <div>
       <div className='card shadow-md hover-shadow-lg hover:scale-105 rounded-lg'>
         <div className='w-full h-full flex items-center justify-center py-5'>
-        <Image src='/../public/assets/skills/render.png' width="50" height="50" alt='/'/>
+        <Image src={Render} width="50" height="50" alt='/'/>
       </div>
      </div>
     </div>
     <div>
       <div className='card shadow-md hover-shadow-lg hover:scale-105 rounded-lg'>
         <div className='w-full h-full flex items-center justify-center py-5'>
-        <Image src='/../public/assets/skills/rspec.png' width="50" height="50" alt='/'/>
+        <Image src={Rspec} width="50" height="50" alt='/'/>
       </div>
      </div>
     </div>
