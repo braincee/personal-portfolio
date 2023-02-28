@@ -4,13 +4,13 @@
 ## Built With
 
 - JavaScript
-- React
+- React JS
 - Next JS
 - Tailwind CSS
 
 ## Live Demo
 
-[Stephen Annnor]()
+[Stephen Annor]()
 
 ## Getting Started
 
@@ -35,7 +35,7 @@
 
 ### Prerequisites
 - JavaScript
-- React
+- React JS
 - Next JS
 - Tailwind CSS
 
@@ -44,7 +44,7 @@
 👤 **Stephen Annor**
 
 - GitHub: [@braincee](https://github.com/braincee/)
-- Twitter: [@nnor0543](https://twitter.com/annor0543)
+- Twitter: [@annor0543](https://twitter.com/annor0543)
 - LinkedIn: [Stephen Annor](https://www.linkedin.com/in/stephen-annor/) 
 - Instagram: [Stephen Annor](https://www.instagram.com/appiah.korang/)
 
