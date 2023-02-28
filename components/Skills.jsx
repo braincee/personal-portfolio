@@ -12,6 +12,7 @@ import Reacto from '../public/assets/skills/react.png'
 import Redux from '../public/assets/skills/redux2.png'
 import Ruby from '../public/assets/skills/ruby.png'
 import Rails from '../public/assets/skills/rails5.png'
+import Firebase from '../public/assets/skills/firebase.png'
 
 const Skills = () => {
 
@@ -159,7 +160,7 @@ const Skills = () => {
      <div>
       <div className='card shadow-md hover-shadow-lg hover:scale-105 rounded-lg'>
         <div className='w-full h-full flex items-center justify-center py-5'>
-        <Image src='/../public/assets/skills/firebase.png' width="50" height="50" alt='/'/>
+        <Image src={Firebase} width="50" height="50" alt='/'/>
       </div>
      </div>
      </div>
