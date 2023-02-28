@@ -7,6 +7,8 @@ import { useInView } from "react-intersection-observer";
 import { motion } from "framer-motion";
 import Html from '../public/assets/skills/html.png'
 import Css from '../public/assets/skills/css.png'
+import JavaScript from '../public/assets/skills/javascript.png'
+import React from '../public/assets/skills/react.png'
 
 const Skills = () => {
 
@@ -119,14 +121,14 @@ const Skills = () => {
      <div>
       <div className='card shadow-md hover-shadow-lg hover:scale-105 rounded-lg'>
         <div className='w-full h-full flex items-center justify-center py-5'>
-        <Image src='/../public/assets/skills/javascript.png' width="50" height="50" alt='/'/>
+        <Image src={JavaScript} width="50" height="50" alt='/'/>
       </div>
      </div>
      </div>
      <div>
       <div className='card shadow-md hover-shadow-lg hover:scale-105 rounded-lg'>
         <div className='w-full h-full flex items-center justify-center py-5'>
-        <Image src='/../public/assets/skills/react.png' width="50" height="50" alt='/'/>
+        <Image src={React} width="50" height="50" alt='/'/>
       </div>
      </div>
      </div>
