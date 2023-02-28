@@ -2,6 +2,7 @@ import React from 'react';
 import visitImg from '../public/assets/projects/visit-ghana.png';
 import calculatorImg from '../public/assets/projects/calculator.png';
 import spaceImg from '../public/assets/projects/space-hub.png'
+import juiceImg from '../public/assets/projects/juice-app.png'
 import ProjectItem from './ProjectItem';
 import { useInView } from "react-intersection-observer";
 import { motion } from "framer-motion";
@@ -41,6 +42,13 @@ const Projects = () => {
             backgroundImg={spaceImg}
             projectUrl='/space-hub'
             Technology="JavaScript | React JS"
+
+          />
+          <ProjectItem
+            title='Juice APP'
+            backgroundImg={juiceImg}
+            projectUrl='/juice-app'
+            Technology="React JS | Supabase"
 
           />
         </div>

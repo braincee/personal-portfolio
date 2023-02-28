@@ -14,21 +14,21 @@ const Main = () => {
                 <div>
                   <p className='text-[70px] tracking-[50px]'><span className='welcome text-[90px] text-yellow-500 leading-10'>W</span>elcome.</p>
                 </div>
-                <div className='border-l border-yellow-600 h-[38vh] ml-10'>
-                <div className='flex items-start ml-5'>
+                <div className='border-l border-yellow-600 h-[38vh] ml-5'>
+                <div className='flex items-start ml-8'>
                    <p className='text-[30px] tracking-[10px]'>My name is,</p>
                   </div>
-                  <div className='flex items-start ml-5'>
+                  <div className='flex items-start ml-8'>
                    <p className='tracking-[10px] italic text-[50px] text-yellow-500 uppercase'>Stephen Annor</p>
                   </div>
-                  <div className='flex items-start ml-5'>
+                  <div className='flex items-start ml-8'>
                   <p className='text-[20px]'>
                     A Full-Stack Web Developer in Accra, Ghana. I turn ideas into engaging 
                     and user-friendly websites with a keen eye for design and a focus on delivering 
                     projects on time. Want to take your website to the next level? Let's talk.
                   </p>
                   </div>
-                  <div className='flex items-start ml-3'>
+                  <div className='flex items-start ml-8'>
                     <p className='text-[30px] tracking-widest text-yellow-400'>Quote: One Man's crappy code is another man's full time Job</p>
                   </div>
                 </div>

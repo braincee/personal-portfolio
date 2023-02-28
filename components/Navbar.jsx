@@ -19,7 +19,7 @@ const Navbar = () => {
       router.asPath === '/visit-ghana' ||
       router.asPath === '/calculator' ||
       router.asPath === '/space-hub' ||
-      router.asPath === '/twitch'
+      router.asPath === '/juice-app'
     ) {
       setNavBg('transparent');
       setLinkColor('#187bcd');
@@ -112,14 +112,14 @@ const Navbar = () => {
       {/* Overlay */}
       <div
         className={
-          nav ? 'md:hidden fixed left-0 top-0 w-full h-[100%] bg-[#03254cd0]' : ''
+          nav ? 'md:hidden fixed left-0 top-0 w-full h-[100%] bg-[#3c4c039c]' : ''
         }
       >
         {/* Side Drawer Menu */}
         <div
           className={
             nav
-              ? ' fixed left-0 top-0 w-[100%] sm:w-[100%] md:w-[100%] h-[100%] bg-[#03254c] p-10 ease-in duration-500'
+              ? ' fixed left-0 top-0 w-[85%] sm:w-[85%] md:w-[85%] h-[100%] bg-[#03254c] p-10 ease-in duration-500'
               : 'fixed left-[-100%] top-0 p-10 ease-in duration-500'
           }
         >
