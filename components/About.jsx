@@ -3,6 +3,7 @@ import React from'react';
 import Image from 'next/image';
 import { useInView } from 'react-intersection-observer';
 import { motion } from 'framer-motion'
+import Logo from '../public/assets/steve.png'
 
 const About = () => {
    
@@ -25,7 +26,7 @@ const About = () => {
           <Image
             width='300'
             height='300'
-            src='/../public/assets/steve.png'
+            src={Logo}
             alt='stephen'
             className='rounded-[300px]'
           />
