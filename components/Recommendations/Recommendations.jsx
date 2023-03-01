@@ -43,10 +43,12 @@ const Recommendations = () => {
             nextButtonStyle: {
               backgroundColor: '#FFCC22',
               borderRadius: '30px',
+              fontSize: '30px',
             },
             prevButtonStyle: {
               backgroundColor: '#FFCC22',
               borderRadius: '30px',
+              fontSize: '30px',
             },
             pagingDotsStyle: {
               fill: '#FFCC22',
