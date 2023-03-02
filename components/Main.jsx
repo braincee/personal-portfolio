@@ -51,7 +51,7 @@ const Main = () => {
                             </Link>
                           </div>
                         <div className='rounded-full bg-[#2a9cf45d] text-yellow-500 p-5 cursor-pointer hover:scale-105 ease in duration-300  hover:bg-yellow-400 hover:text-[#d0efff]'>
-                            <Link href="https://www.instagram.com/appiah.korang/" target="_blank">
+                            <Link href="https://www.instagram.com/appiah.korang/" target='_blank'>
                               <BsInstagram />
                             </Link>
                           </div>
