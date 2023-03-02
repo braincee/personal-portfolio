@@ -74,7 +74,7 @@ const Contact = () => {
 
                   <div className='col-span-3 lg:col-span-2 w-full h-full bg-[#1166b127] rounded-xl p-4'>
                       <div className='lg:p-4 h-full'>
-                          <div>
+                          <div className='flex items-center justify-center'>
                               <Image
                                   className='rounded-xl hover:scale-110 ease-in duration-300'
                                   src={Laptop}
@@ -82,14 +82,14 @@ const Contact = () => {
                                   height='400'
                                   alt='/' />
                           </div>
-                          <div>
+                          <div className='flex flex-col ml-20'>
                               <p className='py-2 text-[#2a9df4] text-3xl tracking-widest'>Stephen Annnor</p>
                               <p className='text-[#2a9df4] text-xl tracking-widest'>Full-Stack Developer</p>
                               <p className='py-4 text-[#2a9df4]'> I am available for freelance or full-time positions. Contact
                                  me and let's talk.</p>
                           </div>
                           <div>
-                          <p className='uppercase pt-8 text-[#2a9df4]'>Connect With Me</p>
+                          <p className='uppercase pt-10 text-[#2a9df4] ml-20'>Connect With Me</p>
                           <div className='flex items-center justify-around py-4'>
                             <Link href="https://www.linkedin.com/in/stephen-annor/" target="_blank">
                              <div className='rounded-full bg-[#2a9cf45d] text-yellow-500 p-6 cursor-pointer hover:scale-105 hover:bg-yellow-500 hover:text-[#d0efff] ease in duration-300'>
