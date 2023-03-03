@@ -36,21 +36,21 @@ const calculator = () => {
         <div className='flex justify-around m-2 py-20'>
             <div className='relative'>
               <Link href='https://visit-ghana.vercel.app/'>
-                <p className='rounded-full py-5 px-[50px] bg-yellow-600 flex items-center text-[30px] md:text-[10px] lg:text-[10px] md:py-[20px] lg:py-[20px]'>
+                <p className='rounded-full py-5 px-[40px] bg-yellow-600 flex items-center text-[30px] md:text-[10px] lg:text-[10px] md:py-[20px] lg:py-[20px]'>
                   <RiLiveFill size={30} className='pr-1' /> View Live Demo
                 </p>
                 </Link>
               </div>
             <div className='relative'>
               <Link href='https://github.com/braincee/tourist-site'>
-                <p className='rounded-full py-5 px-[50px] bg-yellow-600 flex items-center text-[30px] md:text-[10px] lg:text-[10px] md:py-[20px] lg:py-[20px]'>
+                <p className='rounded-full py-5 px-[40px] bg-yellow-600 flex items-center text-[30px] md:text-[10px] lg:text-[10px] md:py-[20px] lg:py-[20px]'>
                   <FiGithub size={30} className='pr-1' /> GitHub 
                 </p>
               </Link> 
             </div>
             <div className=' relative group'>
             <Link href='/#projects'>
-              <p className='rounded-full py-5 px-[50px] bg-yellow-600 cursor-pointer flex items-center text-[30px] md:text-[10px] lg:text-[10px] md:py-[20px] lg:py-[20px]'>
+              <p className='rounded-full py-5 px-[40px] bg-yellow-600 cursor-pointer flex items-center text-[30px] md:text-[10px] lg:text-[10px] md:py-[20px] lg:py-[20px]'>
                 <FaBackward className='pr-1' size={30} /> Back
               </p>
             </Link>
