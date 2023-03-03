@@ -10,9 +10,10 @@ import { motion } from 'framer-motion'
 const Main = () => {
 
   const { ref, InView } = useInView();
-  
+
     return (
-        <div className='text-center main'> 
+      <div ref={ref}>
+             <div className='text-center main'> 
           <div className='w-full h-full mx-auto p-2 flex justify-center items-center'>
               <div>
                 <div className='flex justify-start items-start flex-col gap-5 w-[700px]'>
@@ -64,6 +65,8 @@ const Main = () => {
                 </div> 
           </div>
     </div>
+      </div>
+    
   )
 }
 
