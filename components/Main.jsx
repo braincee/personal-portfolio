@@ -7,7 +7,7 @@ import { BsInstagram } from 'react-icons/bs';
 
 const Main = () => {
     return (
-        <div className='text-center main context'> 
+        <div className='text-center main'> 
           <div className='w-full h-full mx-auto p-2 flex justify-center items-center'>
               <div>
                 <div className='flex justify-start items-start flex-col gap-5 w-[700px]'>
