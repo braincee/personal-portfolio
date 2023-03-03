@@ -52,7 +52,6 @@ const Navbar = () => {
 
   return (
     <div ref={ref}>
-      
        <div
       style={{ backgroundColor: `${navBg}` }}
       className={
