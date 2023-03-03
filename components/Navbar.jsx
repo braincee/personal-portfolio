@@ -7,8 +7,6 @@ import { TiThMenuOutline } from 'react-icons/ti';
 import { FaGithub, FaLinkedinIn } from 'react-icons/fa';
 import { useRouter } from 'next/router';
 import { BsInstagram } from 'react-icons/bs';
-import { useInView } from 'react-intersection-observer';
-import { motion } from 'framer-motion';
 
 
 const Navbar = () => {
@@ -48,7 +46,6 @@ const Navbar = () => {
     window.addEventListener('scroll', handleShadow);
   }, []);
 
-   
   
   return (
     <div
