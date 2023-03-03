@@ -8,6 +8,7 @@ import { FaGithub, FaLinkedinIn } from 'react-icons/fa';
 import { useRouter } from 'next/router';
 import { BsInstagram } from 'react-icons/bs';
 
+
 const Navbar = () => {
   const [nav, setNav] = useState(false);
   const [shadow, setShadow] = useState(false);
@@ -55,7 +56,7 @@ const Navbar = () => {
           : 'fixed w-full h-20 z-[100]'
       }
     >
-      <div className='flex justify-between items-center w-full h-full px-2 2xl:px-16 context-1'>
+      <div className='flex justify-between items-center w-full h-full px-2 2xl:px-16'>
         <div className='logo'>
         <Link href='/'>
           <Image

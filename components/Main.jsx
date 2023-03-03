@@ -3,11 +3,21 @@ import Link from 'next/link';
 import { FaLinkedinIn } from 'react-icons/fa';
 import { AiOutlineGithub, AiOutlineTwitter } from 'react-icons/ai';
 import { BsInstagram } from 'react-icons/bs';
+import { useInView } from 'react-intersection-observer';
+import { motion } from 'framer-motion'
 
 
 const Main = () => {
+
+  const { ref, inView } = useInView();
+
     return (
-        <div className='text-center main context'> 
+      <div ref={ref}>
+        <motion.div
+         initial={{ opacity: 0, x: -100 }}
+         animate={{ opacity: inView ? 1 : 0, x: inView ? 0 : -100 }}
+         transition={{ duration: 1, ease: "easeOut", delay: 0.1 }}>
+        <div className='text-center main'> 
           <div className='w-full h-full mx-auto p-2 flex justify-center items-center'>
               <div>
                 <div className='flex justify-start items-start flex-col gap-5 w-[700px]'>
@@ -58,7 +68,10 @@ const Main = () => {
                     </div>
                 </div> 
           </div>
-    </div>
+           </div>
+        </motion.div>
+      </div>
+    
   )
 }
 
