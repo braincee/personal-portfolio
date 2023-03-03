@@ -8,6 +8,9 @@ import { motion } from 'framer-motion'
 
 
 const Main = () => {
+
+  const { ref, InView } = useInView();
+  
     return (
         <div className='text-center main'> 
           <div className='w-full h-full mx-auto p-2 flex justify-center items-center'>
