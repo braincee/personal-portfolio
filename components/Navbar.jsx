@@ -48,7 +48,8 @@ const Navbar = () => {
     window.addEventListener('scroll', handleShadow);
   }, []);
 
-  
+  const {ref, inView } = useInView();
+
   return (
     <div
       style={{ backgroundColor: `${navBg}` }}
