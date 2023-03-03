@@ -25,7 +25,7 @@ const calculator = () => {
       </div>
 
       <div className='mx-auto p-2 pt-20 grid grid-cols-12 lg:pt-2 project-outline'>
-        <div className='col-span-9 m-[40px] lg:m-[20px]'>
+        <div className='col-span-10 m-[40px] lg:m-[20px]'>
           <p className='text-yellow-600 text-[70px] py-10 tracking-widest lg:text-[40px]'>Project Outline</p>
           <p className='italic text-[25px] m-4'>
           Visit Ghana is my first website created with Next JS. This website consists of the 
@@ -37,27 +37,28 @@ const calculator = () => {
             <div className='relative'>
               <Link href='https://visit-ghana.vercel.app/'>
                 <p className='rounded-full py-5 px-[40px] bg-yellow-600 flex items-center text-[30px] md:text-[10px] lg:text-[10px]'>
-                  <RiLiveFill size={30} className='pr-1' />Live Demo
+                  <RiLiveFill size={20} className='pr-1' />Live Demo
                 </p>
                 </Link>
               </div>
             <div className='relative'>
               <Link href='https://github.com/braincee/tourist-site'>
                 <p className='rounded-full py-5 px-[40px] bg-yellow-600 flex items-center text-[30px] md:text-[10px] lg:text-[10px] md:py-[20px] lg:py-[20px]'>
-                  <FiGithub size={30} className='pr-1' /> GitHub 
+                  <FiGithub size={20} className='pr-1' /> GitHub 
                 </p>
               </Link> 
             </div>
             <div className=' relative group'>
             <Link href='/#projects'>
-              <p className='rounded-full py-5 px-[40px] bg-yellow-600 cursor-pointer flex items-center text-[30px] md:text-[10px] lg:text-[10px] md:py-[20px] lg:py-[20px]'>
-                <FaBackward className='pr-1' size={30} /> Back
+              <p className='rounded-full py-2 px-[40px] bg-yellow-600 cursor-pointer flex items-center text-[30px] md:text-[10px] lg:text-[10px] md:py-[20px] lg:py-[20px]'>
+                <FaBackward className='pr-1' size={20} /> Back
               </p>
             </Link>
             </div>
           </div>
         </div>
-        <div className='col-span-3 shadow-sm shadow-yellow-400 rounded-2xl p-4 mt-20 h-[40vh]'>
+        <div className='flex justify-start'>
+        <div className='col-span-2 shadow-sm shadow-yellow-400 rounded-2xl p-4 mt-20 h-[40vh]'>
           <div className='p-2'>
             <p className='text-center font-bold pb-2'>Technologies</p>
             <div className='flex items-center justify-around flex-col'>
@@ -69,6 +70,7 @@ const calculator = () => {
               </p>
             </div>
           </div>
+        </div>
         </div>
       </div>
     </div>
