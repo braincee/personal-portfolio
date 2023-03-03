@@ -27,7 +27,7 @@ const calculator = () => {
       <div className='mx-auto p-2 pt-20 grid grid-cols-12 lg:pt-2 project-outline'>
         <div className='col-span-10 m-[40px] lg:m-[20px]'>
           <p className='text-yellow-600 text-[70px] py-10 tracking-widest lg:text-[40px]'>Project Outline</p>
-          <p className='italic text-[30px] m-4 lg:text-[25px]'>
+          <p className='italic text-[25px] m-4'>
           Visit Ghana is my first website created with Next JS. This website consists of the 
           history about Ghana, Regions in Ghana and Tourist Destinations in Ghana. This website 
           gives your more information about Ghana and 
