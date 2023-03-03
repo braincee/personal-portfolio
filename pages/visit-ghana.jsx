@@ -25,7 +25,7 @@ const calculator = () => {
       </div>
 
       <div className='mx-auto p-2 pt-20 grid grid-cols-12 lg:pt-2 project-outline'>
-        <div className='col-span-10 m-[40px] lg:m-[20px]'>
+        <div className='col-span-9 m-[40px] lg:m-[20px]'>
           <p className='text-yellow-600 text-[70px] py-10 tracking-widest lg:text-[40px]'>Project Outline</p>
           <p className='italic text-[25px] m-4'>
           Visit Ghana is my first website created with Next JS. This website consists of the 
@@ -57,7 +57,7 @@ const calculator = () => {
             </div>
           </div>
         </div>
-        <div className='col-span-2 shadow-sm shadow-yellow-400 rounded-2xl p-4 mt-20 h-[40vh]'>
+        <div className='col-span-3 shadow-sm shadow-yellow-400 rounded-2xl p-4 mt-20 h-[40vh]'>
           <div className='p-2'>
             <p className='text-center font-bold pb-2'>Technologies</p>
             <div className='flex items-center justify-around flex-col'>
