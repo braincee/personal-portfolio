@@ -36,7 +36,7 @@ const calculator = () => {
         <div className='flex justify-around m-2 py-20'>
             <div className='relative'>
               <Link href='https://visit-ghana.vercel.app/'>
-                <p className='rounded-full py-5 px-[40px] bg-yellow-600 flex items-center text-[30px] md:text-[10px] lg:text-[10px] md:py-[20px] lg:py-[20px]'>
+                <p className='rounded-full py-5 px-[40px] bg-yellow-600 flex items-center text-[30px] md:text-[10px] lg:text-[10px]'>
                   <RiLiveFill size={30} className='pr-1' />Live Demo
                 </p>
                 </Link>
