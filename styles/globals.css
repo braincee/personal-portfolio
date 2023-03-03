@@ -266,58 +266,6 @@ html {
   }
 }
 
-@keyframes context-fade {
-  from {
-    opacity: 0;
-    transform: translateX(100%);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-.context {
-  animation-name: context-fade;
-  animation-duration: 4s;
-  animation-fill-mode: both;
-}
-
-@keyframes context-1 {
-  from {
-    opacity: 0;
-    transform: translateY(100%);
-  }
-  to {
-    opacity: 4;
-    transform: translateY(0);
-  }
-}
-
-.context-1 {
-  animation-name: context-1;
-  animation-duration: 4s;
-  animation-fill-mode: both;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateX(-100%);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-.fade-1 {
-  animation-name: fadeIn;
-  animation-duration: 4s;
-  animation-fill-mode: both;
-}
-
 .image-shape {
   shape-outside: circle(50%);
 }
