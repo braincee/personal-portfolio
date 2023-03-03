@@ -51,8 +51,7 @@ const Navbar = () => {
   const {ref, inView } = useInView();
 
   return (
-    <div ref={ref}>
-       <div
+    <div
       style={{ backgroundColor: `${navBg}` }}
       className={
         shadow
@@ -221,8 +220,6 @@ const Navbar = () => {
         </div>
       </div>
     </div>
-    </div>
-    
   );
 };
 
