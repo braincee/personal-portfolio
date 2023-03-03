@@ -14,8 +14,8 @@ const Main = () => {
     return (
       <div ref={ref}>
         <motion.div
-         initial={{ opacity: 0, y: 50 }}
-         animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : -100 }}
+         initial={{ opacity: 0, x: -100 }}
+         animate={{ opacity: inView ? 1 : 0, x: inView ? 0 : -100 }}
          transition={{ duration: 1, ease: "easeOut", delay: 0.1 }}>
         <div className='text-center main'> 
           <div className='w-full h-full mx-auto p-2 flex justify-center items-center'>
