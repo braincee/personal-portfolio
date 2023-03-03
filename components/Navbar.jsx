@@ -52,7 +52,9 @@ const Navbar = () => {
 
   return (
     <div ref={ref}>
-       <div
+     <motion.div
+     >
+      <div
       style={{ backgroundColor: `${navBg}` }}
       className={
         shadow
@@ -221,6 +223,7 @@ const Navbar = () => {
         </div>
       </div>
     </div>
+      </motion.div>
     </div>
     
   );
