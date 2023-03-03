@@ -53,6 +53,9 @@ const Navbar = () => {
   return (
     <div ref={ref}>
      <motion.div
+      initial={{ opacity: 0, y: 50 }}
+      animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : 50 }}
+      transition={{ duration: 1, ease: "easeOut", delay: 0.1 }}
      >
       <div
       style={{ backgroundColor: `${navBg}` }}
