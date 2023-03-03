@@ -37,21 +37,21 @@ const calculator = () => {
             <div className='relative'>
               <Link href='https://visit-ghana.vercel.app/'>
                 <p className='rounded-full py-5 px-[50px] bg-yellow-600 flex items-center text-[30px] md:text-[10px] lg:text-[10px] md:py-[20px] lg:py-[20px]'>
-                  <RiLiveFill size={20} className='pr-1' /> View Live Demo
+                  <RiLiveFill size={30} className='pr-1' /> View Live Demo
                 </p>
                 </Link>
               </div>
             <div className='relative'>
               <Link href='https://github.com/braincee/tourist-site'>
                 <p className='rounded-full py-5 px-[50px] bg-yellow-600 flex items-center text-[30px] md:text-[10px] lg:text-[10px] md:py-[20px] lg:py-[20px]'>
-                  <FiGithub size={20} className='pr-1' /> GitHub 
+                  <FiGithub size={30} className='pr-1' /> GitHub 
                 </p>
               </Link> 
             </div>
             <div className=' relative group'>
             <Link href='/#projects'>
               <p className='rounded-full py-5 px-[50px] bg-yellow-600 cursor-pointer flex items-center text-[30px] md:text-[10px] lg:text-[10px] md:py-[20px] lg:py-[20px]'>
-                <FaBackward className='pr-1' size={20} /> Back
+                <FaBackward className='pr-1' size={30} /> Back
               </p>
             </Link>
             </div>
