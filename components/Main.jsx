@@ -3,6 +3,8 @@ import Link from 'next/link';
 import { FaLinkedinIn } from 'react-icons/fa';
 import { AiOutlineGithub, AiOutlineTwitter } from 'react-icons/ai';
 import { BsInstagram } from 'react-icons/bs';
+import { useInView } from 'react-intersection-observer';
+import { motion } from 'framer-motion'
 
 
 const Main = () => {
