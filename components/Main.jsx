@@ -29,7 +29,7 @@ const Main = () => {
                    <p className='text-[30px] tracking-[10px]'>My name is,</p>
                   </div>
                   <div className='flex items-start ml-8'>
-                   <p className='tracking-[10px] italic text-[50px] text-yellow-500 uppercase'>Stephen Annor</p>
+                   <p className='tracking-[10px] italic text-[50px] text-yellow-500 uppercase'>KWESI ANNOR</p>
                   </div>
                   <div className='flex items-start ml-8'>
                   <p className='text-[20px]'>
