@@ -29,7 +29,7 @@ const Main = () => {
                    <p className='text-[30px] tracking-[10px]'>My name is,</p>
                   </div>
                   <div className='flex items-start ml-8'>
-                   <p className='tracking-[10px] italic text-[50px] text-yellow-500 uppercase'>KWESI ANNOR</p>
+                   <p className='tracking-[10px] italic text-[50px] text-yellow-500 uppercase'>STEPHEN ANNOR</p>
                   </div>
                   <div className='flex items-start ml-8'>
                   <p className='text-[20px]'>
@@ -43,7 +43,7 @@ const Main = () => {
                   </div>
                 </div>
                 </div>
-                    <div className='flex items-center justify-between max-w-[500px] m-auto py-[70px]'>
+                    <div className='flex items-center justify-between max-w-[500px] m-auto pt-[150px]'>
                         <div className='rounded-full bg-[#2a9cf45d] text-yellow-500 p-5 cursor-pointer hover:scale-105 hover:bg-yellow-400 hover:text-[#d0efff] ease in duration-300'>
                             <Link href="https://www.linkedin.com/in/stephen-annor/" target="_blank" rel="noopener noreferrer">
                               <FaLinkedinIn />

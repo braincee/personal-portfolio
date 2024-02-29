@@ -119,7 +119,7 @@ const Contact = () => {
                   {/*right*/ }
                   <div className='col-span-3 w-full h-auto bg-[#1166b127] rounded-xl lg:p-4'>
                   {sucessAlert && (
-                                <p className='text-yellow-600 text-center mt-10 tracking'>Thank you for ontacting Stephen, 
+                                <p className='text-yellow-600 text-center mt-10 tracking'>Thank you for contacting Stephen, 
                                 your message has been recieved and will be replied as soon as possible</p>
                               )}
                       <div className='p-4'>
